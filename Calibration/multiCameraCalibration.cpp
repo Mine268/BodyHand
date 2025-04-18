@@ -822,9 +822,9 @@ bool viz(std::vector<CameraController>& cameraMatrix, std::vector<cv::Point3d>& 
     };
 
 	// 假设每88个点是一个8x11的棋盘格
-	size_t points_per_grid = 70;
-	size_t rows = 7;
-	size_t cols = 10;
+	size_t points_per_grid = NUM_WIDTH * NUM_HEIGHT;
+	size_t rows = NUM_HEIGHT;
+	size_t cols = NUM_WIDTH;
 
 	// 只显示第一个棋盘格
 	cv::viz::Color color = colors[0];

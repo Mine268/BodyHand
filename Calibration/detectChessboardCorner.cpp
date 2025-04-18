@@ -37,7 +37,7 @@ bool extractOneImageCorners(const cv::Mat& image,
     downsampleImage = filteredImage;
 
     bool patternWasFound = cv::findChessboardCorners(downsampleImage, cv::Size(NUM_HEIGHT, NUM_WIDTH), corners,
-        cv::CALIB_CB_FILTER_QUADS);
+        cv::CALIB_CB_FAST_CHECK);
     if (patternWasFound)
     {
         // 恢复角点的原始尺寸
