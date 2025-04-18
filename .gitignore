@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+/.vs/BodyHand
+/packages/vcpkg.D.dev.vcpkg.1.0.0
+/x64/Debug
+*.nupkg
+/Calibration/x64/Debug
