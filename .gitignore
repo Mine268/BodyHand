@@ -38,3 +38,6 @@
 /Calibration/x64/Release
 /SynchronizeCapture/x64
 /x64/Release
+/BodyHand/models
+/BodyHand/x64/Debug
+/TestBodyEstimation/x64/Debug
