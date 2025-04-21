@@ -41,3 +41,6 @@
 /BodyHand/models
 /BodyHand/x64/Debug
 /TestBodyEstimation/x64/Debug
+/BodyHand/x64/Release
+/TestBodyEstimation/x64/Release
+/TestHandEstimation/x64/Debug

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main_BodyEstimation.cpp">
+    <ClCompile Include="main_HandEstimation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -23,7 +23,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="bus.jpg">
+    <Image Include="person.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="wangsit.jpg">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

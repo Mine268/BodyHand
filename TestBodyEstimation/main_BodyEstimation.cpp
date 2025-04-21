@@ -43,11 +43,22 @@ int main() {
 					cv::Scalar(0, 0, 255),
 					-1
 				);
+				cv::putText(
+					img,
+					std::format("{}", j),
+					keypoints_2d[0][p][j],
+					cv::FONT_HERSHEY_SIMPLEX,
+					0.8,
+					cv::Scalar(0, 0, 255),
+					2
+				);
 			}
 		}
 	}
 
 	cv::imwrite("bus_annot.jpg", img);
+	cv::imshow("body pose", img);
+	cv::waitKey(0);
 
 	return 0;
 }

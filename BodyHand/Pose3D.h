@@ -17,8 +17,8 @@ namespace BodyHand
 	struct CameraParameter {
 		cv::Mat intrinsics;
 		std::vector<float> undist;
-		cv::Mat rotation, translation;
-		cv::Mat rot_transformation, transl_transformation;
+		cv::Mat rot_transformation;
+		cv::Mat transl_transformation;
 	};
 
 	struct BodyModelConfig {
@@ -26,8 +26,7 @@ namespace BodyHand
 	};
 
 	struct HandModelConfig {
-		std::string detect_path;
-		std::string lr_path;
+		std::string handlr_path;
 		std::string hamer_path;
 	};
 
@@ -60,6 +59,21 @@ namespace BodyHand
 			OUT std::vector<std::vector<std::vector<cv::Point2f>>>& kpss2d,
 			OUT std::vector<std::vector<std::vector<float>>>& conf_kpss,
 			OUT std::vector<std::vector<float>>& conf_bodies
+		);
+
+		/// <summary>
+		/// 进行手部姿态估计，最多估计一个左手和右手
+		/// </summary>
+		/// <param name="img">单张待估计图像</param>
+		/// <param name="_kps_cam">长度42，分别是右手+左手在相机空间中的位置</param>
+		/// <param name="_kps_img">图像上的关键点位置</param>
+		/// <param name="view_ix">从哪一个视图中进行估计</param>
+		/// <returns>始终true</returns>
+		bool estimateHand(
+			IN cv::Mat& img,
+			OUT std::vector<cv::Point3f>& _kps_cam,
+			OUT std::vector<cv::Point2f>& _kps_img,
+			IN int view_ix = 0
 		);
 
 	private:

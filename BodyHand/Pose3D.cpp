@@ -33,6 +33,16 @@ namespace BodyHand {
 			throw std::runtime_error("Expect #undistortion coef to be 5");
 		}
 
+		// 加载相机内参
+		for (std::size_t i = 0; i < _intrinsics.size(); ++i) {
+			this->cameras.emplace_back(
+				_intrinsics[i],
+				_undists[i],
+				_rot_transformations[i],
+				_transl_transformation[i]
+			);
+		}
+
 		// 加载模型
 		if (!loadBodyModel()) {
 			throw std::runtime_error("Cannot load body model");
@@ -47,7 +57,7 @@ namespace BodyHand {
 	}
 
 	bool PoseEstimator::loadHandModel() {
-		return true;
+		return hand_model.loadModel(hand_model_cfg.handlr_path, hand_model_cfg.hamer_path);
 	}
 
 	bool PoseEstimator::estimateBody(
@@ -56,6 +66,9 @@ namespace BodyHand {
 		OUT std::vector<std::vector<std::vector<float>>>& conf_kpss,
 		OUT std::vector<std::vector<float>>& conf_bodies
 	) {
+		kpss2d.clear();
+		conf_kpss.clear();
+		conf_bodies.clear();
 		for (auto &img : imgs) {
 			std::vector<OutputPose> poses_2d;
 			if (!body_model.OnnxDetect(img, poses_2d)) {
@@ -79,6 +92,27 @@ namespace BodyHand {
 			conf_kpss.emplace_back(std::move(conf_kps));
 			conf_bodies.emplace_back(std::move(conf_body));
 		}
+		return true;
+	}
+
+	bool PoseEstimator::estimateHand(
+		IN cv::Mat& img,
+		OUT std::vector<cv::Point3f>& _kps_cam,
+		OUT std::vector<cv::Point2f>& _kps_img,
+		IN int view_ix
+	) {
+		if (view_ix >= cameras.size()) {
+			throw std::runtime_error("view_ix out of range");
+		}
+
+		auto [valid_right, valid_left] = this->hand_model.detectPose(
+			img,
+			cameras[view_ix].intrinsics,
+			cameras[view_ix].undist,
+			_kps_cam,
+			_kps_img
+		);
+
 		return true;
 	}
 
