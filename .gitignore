@@ -44,3 +44,5 @@
 /BodyHand/x64/Release
 /TestBodyEstimation/x64/Release
 /TestHandEstimation/x64/Debug
+/MediaPipeHandDetector/x64
+/pyvenv/__pycache__

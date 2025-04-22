@@ -6,6 +6,8 @@ int main() {
 	BodyHand::BodyModelConfig body_cfg;
 	body_cfg.model_path = "../BodyHand/models/yolov8s-pose.onnx";
 	BodyHand::HandModelConfig hand_cfg;
+	hand_cfg.handlr_path = "../BodyHand/models/handLR_480x640.onnx";
+	hand_cfg.hamer_path = "../BodyHand/models/hand_mano.onnx";
 	std::vector<cv::Mat> intr = { (cv::Mat_<float>(3, 3) << 1880, 0, 720, 0, 1880, 540, 0, 0, 1) };
 	std::vector<cv::Mat> rot = { (cv::Mat_<float>(3, 3) << 1, 0, 0, 0, 1, 0, 0, 0, 1) };
 	std::vector<cv::Mat> transl = { (cv::Mat_<float>(3, 1) << 0, 0, 0) };
@@ -56,7 +58,6 @@ int main() {
 		}
 	}
 
-	cv::imwrite("bus_annot.jpg", img);
 	cv::imshow("body pose", img);
 	cv::waitKey(0);
 

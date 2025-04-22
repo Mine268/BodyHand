@@ -76,6 +76,13 @@ namespace BodyHand
 			IN int view_ix = 0
 		);
 
+		bool estimatePose(
+			IN std::vector<cv::Mat>& imgs,
+			OUT std::vector<cv::Point3f>& body_kps,
+			OUT std::vector<cv::Point3f>& hand_kps,
+			IN int hand_ref_view = 0
+		);
+
 	private:
 		bool loadBodyModel();
 		bool loadHandModel();
