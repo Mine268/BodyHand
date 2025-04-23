@@ -255,6 +255,8 @@ namespace BodyHand {
 				hand_bbox,
 				hand_ref_view
 			);
+			pose_result.valid_left = valid_left;
+			pose_result.valid_right = valid_right;
 			pose_result.hand_kps_3d = std::move(hand_kps_3d);
 			pose_result.hand_kps_2d = std::move(hand_kps_2d);
 			pose_result.hand_bbox = std::move(hand_bbox);

@@ -9,17 +9,14 @@ namespace BodyHand {
         float box_width = (x2 - x1);
         float box_height = (y2 - y1);
 
-        int len = int(std::max(box_width, box_height));
-        len = std::max(len, target_size / 2); // TODO: ?
-        int new_x1 = int(box_center_x - len);
-        int new_x2 = int(box_center_x + len);
-        int new_y1 = int(box_center_y - len);
-        int new_y2 = int(box_center_y + len);
+        float origin_square_size = int(std::max(box_width, box_height));
+        origin_square_size *= 2; // °üÎ§¿òÀ©³äµ½Á½±¶
+        int new_x1 = int(box_center_x - origin_square_size / 2);
+        int new_x2 = int(box_center_x + origin_square_size / 2);
+        int new_y1 = int(box_center_y - origin_square_size / 2);
+        int new_y2 = int(box_center_y + origin_square_size / 2);
 
-        int side = std::max(2 * len, 1);
-        cv::Mat output = cv::Mat::zeros(side, side, img.type());
-        // cv::Mat output = cv::Mat::zeros(2*len , 2*len, img.type());
-
+        cv::Mat origin_square_img(origin_square_size, origin_square_size, img.type());
         int src_x1 = std::max(new_x1, 0);
         int src_y1 = std::max(new_y1, 0);
         int src_x2 = std::min(new_x2, img.cols - 1);
@@ -28,22 +25,23 @@ namespace BodyHand {
         int dst_y = src_y1 - new_y1;
         cv::Rect srcRect(src_x1, src_y1, src_x2 - src_x1, src_y2 - src_y1);
         cv::Rect dstRect(dst_x, dst_y, srcRect.width, srcRect.height);
+
         if (srcRect.width > 0 && srcRect.height > 0 &&
             dstRect.x >= 0 && dstRect.y >= 0 &&
-            dstRect.x + dstRect.width <= output.cols &&
-            dstRect.y + dstRect.height <= output.rows)
+            dstRect.x + dstRect.width <= origin_square_img.cols &&
+            dstRect.y + dstRect.height <= origin_square_img.rows)
         {
-            img(srcRect).copyTo(output(dstRect));
+            img(srcRect).copyTo(origin_square_img(dstRect));
         }
         else {
             throw std::runtime_error("Cannot crop & resize this image");
         }
-        cv::Mat out_resize;
-        scale_factor = float(side) / float(target_size);
-        cv::resize(output, out_resize, cv::Size(target_size, target_size));
-        return out_resize;
-    }
 
+        cv::Mat output_square;
+        scale_factor = origin_square_size / float(target_size);
+        cv::resize(origin_square_img, output_square, cv::Size(target_size, target_size));
+        return output_square;
+    }
 
 	HaMeROnnx::HaMeROnnx() :
 		handlr_session(nullptr),

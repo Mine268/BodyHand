@@ -131,12 +131,27 @@ int main() {
 	};
 
 	std::vector<cv::Mat> imgs = {
-		cv::imread(R"(E:\BodyHandCapture\2025_04_22_1\frames\V0\000465.jpg)"),
-		cv::imread(R"(E:\BodyHandCapture\2025_04_22_1\frames\V1\000465.jpg)")
+		cv::imread(R"(E:\BodyHandCapture\2025_04_22_1\frames\V0\000001.jpg)"),
+		cv::imread(R"(E:\BodyHandCapture\2025_04_22_1\frames\V1\000001.jpg)")
 	};
 
 	BodyHand::PoseResult pose_result;
-	pe.estimatePose(imgs, pose_result);
+	pe.estimatePose(imgs, pose_result, 0);
+	cv::Mat img_hand = imgs[0];
+	if (pose_result.valid_left) {
+		cv::rectangle(img_hand, pose_result.hand_bbox[0], cv::Scalar(255, 0, 0), 3);
+		for (int i = 0; i < 21; ++i) {
+			cv::circle(img_hand, pose_result.hand_kps_2d[i], 2, cv::Scalar(255, 0, 0), -1);
+		}
+	}
+	if (pose_result.valid_right) {
+		cv::rectangle(img_hand, pose_result.hand_bbox[1], cv::Scalar(0, 255, 0), 3);
+		for (int i = 21; i < 42; ++i) {
+			cv::circle(img_hand, pose_result.hand_kps_2d[i], 2, cv::Scalar(0, 255, 0), -1);
+		}
+	}
+	cv::imshow("hand det", img_hand);
+	cv::waitKey(1);
 	std::cout << 
 		std::format("body: {}, right: {}, left: {}", pose_result.valid_body, pose_result.valid_right, pose_result.valid_left) <<
 		std::endl;
