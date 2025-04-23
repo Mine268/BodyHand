@@ -30,6 +30,17 @@ namespace BodyHand
 		std::string hamer_path;
 	};
 
+	struct PoseResult {
+		bool valid_body, valid_left, valid_right;
+		std::vector<cv::Point3f> body_kps_3d{};
+		std::vector<std::vector<std::vector<cv::Point2f>>> body_kps_2d{};
+		std::vector<std::vector<std::vector<float>>> body_kps_conf{};
+		std::vector<std::vector<float>> body_conf{};
+		std::vector<cv::Point3f> hand_kps_3d{};
+		std::vector<cv::Point2f> hand_kps_2d{};
+		std::vector<cv::Rect2f> hand_bbox{}; // xywh
+	};
+
 	/// <summary>
 	/// 手+身体关节点检测。需要标定的多视图。
 	/// </summary>
@@ -65,27 +76,46 @@ namespace BodyHand
 		/// 进行手部姿态估计，最多估计一个左手和右手
 		/// </summary>
 		/// <param name="img">单张待估计图像</param>
-		/// <param name="_kps_cam">长度42，分别是右手+左手在相机空间中的位置</param>
+		/// <param name="_kps_cam">长度42，分别是左手+右手在相机空间中的位置</param>
 		/// <param name="_kps_img">图像上的关键点位置</param>
 		/// <param name="view_ix">从哪一个视图中进行估计</param>
-		/// <returns>始终true</returns>
-		bool estimateHand(
+		/// <returns>(左手有效性, 右手有效性)</returns>
+		std::tuple<bool, bool> estimateHand(
 			IN cv::Mat& img,
 			OUT std::vector<cv::Point3f>& _kps_cam,
 			OUT std::vector<cv::Point2f>& _kps_img,
+			OUT std::optional<std::reference_wrapper<std::vector<cv::Rect2f>>> hand_bbox = std::nullopt,
 			IN int view_ix = 0
 		);
 
-		bool estimatePose(
+		/// <summary>
+		/// 进行全身的姿态估计
+		/// </summary>
+		/// <param name="imgs">多视图图像</param>
+		/// <param name="body_kps">人体关节点</param>
+		/// <param name="hand_kps">手部关节点，前21个是人手的，后21个是人体的</param>
+		/// <param name="hand_ref_view">从哪一个视图中进行手部估计</param>
+		/// <returns>(全身有效性, 左手有效性, 右手有效性)</returns>
+		std::tuple<bool, bool, bool> estimatePose(
 			IN std::vector<cv::Mat>& imgs,
 			OUT std::vector<cv::Point3f>& body_kps,
 			OUT std::vector<cv::Point3f>& hand_kps,
 			IN int hand_ref_view = 0
 		);
 
+		void estimatePose(
+			IN std::vector<cv::Mat>& imgs,
+			OUT PoseResult& pose_result,
+			IN int hand_ref_view = 0
+		);
+
 	private:
 		bool loadBodyModel();
 		bool loadHandModel();
+
+		std::vector<cv::Point3f> triangulate2DPoints(
+			const std::vector<std::vector<cv::Point2f>>& img_coords
+		);
 
 	private:
 		// 人体检测的 yolo 模型的地址和模型

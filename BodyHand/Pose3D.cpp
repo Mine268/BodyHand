@@ -1,5 +1,6 @@
 #include <exception>
 #include <algorithm>
+#include <opencv2/sfm/triangulation.hpp>
 #include "Pose3D.h"
 
 namespace BodyHand {
@@ -95,25 +96,177 @@ namespace BodyHand {
 		return true;
 	}
 
-	bool PoseEstimator::estimateHand(
+	std::tuple<bool, bool> PoseEstimator::estimateHand(
 		IN cv::Mat& img,
 		OUT std::vector<cv::Point3f>& _kps_cam,
 		OUT std::vector<cv::Point2f>& _kps_img,
+		OUT std::optional<std::reference_wrapper<std::vector<cv::Rect2f>>> hand_bbox,
 		IN int view_ix
 	) {
 		if (view_ix >= cameras.size()) {
 			throw std::runtime_error("view_ix out of range");
 		}
 
-		auto [valid_right, valid_left] = this->hand_model.detectPose(
+		auto [valid_left, valid_right] = this->hand_model.detectPose(
 			img,
 			cameras[view_ix].intrinsics,
 			cameras[view_ix].undist,
 			_kps_cam,
-			_kps_img
+			_kps_img,
+			hand_bbox
 		);
 
-		return true;
+		return { valid_left, valid_right };
+	}
+	
+	std::vector<cv::Point3f> PoseEstimator::triangulate2DPoints(const std::vector<std::vector<cv::Point2f>>& img_coords) {
+		// 构造投影矩阵
+		std::vector<cv::Mat_<double>> projections_double;
+		for (const auto& cam : cameras) {
+			cv::Mat proj, proj_double;
+			cv::hconcat(cam.rot_transformation, cam.transl_transformation, proj);
+			proj = cam.intrinsics * proj;
+			proj.convertTo(proj_double, CV_64F);
+			projections_double.emplace_back(std::move(proj_double));
+		}
+		std::vector<cv::Mat_<double>> img_coords_double;
+		img_coords_double.reserve(img_coords.size());
+		for (const auto& coords : img_coords) {
+			const int N = coords.size();
+			cv::Mat_<double> mat(2, N);
+			for (int i = 0; i < N; ++i) {
+				mat.at<double>(0, i) = coords[i].x;
+				mat.at<double>(1, i) = coords[i].y;
+			}
+			img_coords_double.emplace_back(std::move(mat));
+		}
+		cv::Mat kps_3d_double;
+		cv::sfm::triangulatePoints(img_coords_double, projections_double, kps_3d_double);
+		std::vector<cv::Point3f> kps_3d(kps_3d_double.cols);
+		for (int i = 0; i < kps_3d_double.cols; ++i) {
+			kps_3d[i] = cv::Point3f{
+				static_cast<float>(kps_3d_double.at<double>(0, i)),
+				static_cast<float>(kps_3d_double.at<double>(1, i)),
+				static_cast<float>(kps_3d_double.at<double>(2, i))
+			};
+		}
+		return kps_3d;
+	}
+
+	std::tuple<bool, bool, bool> PoseEstimator::estimatePose(
+		IN std::vector<cv::Mat>& imgs,
+		OUT std::vector<cv::Point3f>& body_kps,
+		OUT std::vector<cv::Point3f>& hand_kps,
+		IN int hand_ref_view
+	) {
+		if (hand_ref_view >= cameras.size()) {
+			throw std::runtime_error("view_ix out of range");
+		}
+
+		hand_kps.clear();
+		hand_kps.resize(42);
+
+		// 人体姿态估计
+		std::vector<std::vector<std::vector<cv::Point2f>>> body_kps_2d;
+		std::vector<std::vector<std::vector<float>>> body_kps_conf;
+		std::vector<std::vector<float>> body_conf;
+		bool valid_body = estimateBody(imgs, body_kps_2d, body_kps_conf, body_conf);
+
+		// 每个视图默认选第0个人
+		std::vector<std::vector<cv::Point2f>> body_kps_2d_selected;
+		for (const auto& k2d : body_kps_2d) {
+			body_kps_2d_selected.emplace_back(k2d[0]);
+		}
+
+		// 多视图三角化
+		std::vector<cv::Point3f> body_kps_3d;
+		body_kps_3d = triangulate2DPoints(body_kps_2d_selected);
+
+		// 手部姿态估计
+		std::vector<cv::Point3f> hand_kps_3d;
+		std::vector<cv::Point2f> hand_kps_2d;
+		auto [valid_left, valid_right] = estimateHand(imgs[hand_ref_view], hand_kps_3d, hand_kps_2d, std::nullopt, hand_ref_view);
+
+		body_kps = body_kps_3d;
+		// 拼接
+		if (valid_left) {
+			std::transform(hand_kps_3d.begin(), hand_kps_3d.begin() + 21, hand_kps.begin(),
+				[&](const cv::Point3f& joint) {
+					// 左手拼接到左手手腕
+					return joint - hand_kps_3d[0] + body_kps[9];
+				}
+			);
+		}
+		if (valid_right) {
+			std::transform(hand_kps_3d.begin() + 21, hand_kps_3d.end(), hand_kps.begin() + 21,
+				[&](const cv::Point3f& joint) {
+					// 右手拼接到右手手腕
+					return joint - hand_kps_3d[21] + body_kps[10];
+				}
+			);
+		}
+
+		return { valid_body, valid_left, valid_right };
+	}
+
+	void PoseEstimator::estimatePose(
+		IN std::vector<cv::Mat>& imgs,
+		OUT PoseResult& pose_result,
+		IN int hand_ref_view
+	) {
+		if (hand_ref_view >= cameras.size()) {
+			throw std::runtime_error("view_ix out of range");
+		}
+
+		// 人体姿态估计
+		{
+			std::vector<std::vector<std::vector<cv::Point2f>>> body_kps_2d;
+			std::vector<std::vector<std::vector<float>>> body_kps_conf;
+			std::vector<std::vector<float>> body_conf;
+			bool valid_body = estimateBody(imgs, body_kps_2d, body_kps_conf, body_conf);
+
+			// 每个视图默认选第0个人
+			std::vector<std::vector<cv::Point2f>> body_kps_2d_selected;
+			for (const auto& k2d : body_kps_2d) {
+				body_kps_2d_selected.emplace_back(k2d[0]);
+			}
+
+			// 多视图三角化
+			std::vector<cv::Point3f> body_kps_3d;
+			body_kps_3d = triangulate2DPoints(body_kps_2d_selected);
+
+			// 结果存入
+			pose_result.valid_body = valid_body;
+			pose_result.body_kps_3d = std::move(body_kps_3d);
+			pose_result.body_kps_2d = std::move(body_kps_2d);
+			pose_result.body_kps_conf = std::move(body_kps_conf);
+			pose_result.body_conf = std::move(body_conf);
+		}
+
+		// 人手姿态估计
+		{
+			std::vector<cv::Point3f> hand_kps_3d;
+			std::vector<cv::Point2f> hand_kps_2d;
+			std::vector<cv::Rect2f> hand_bbox;
+			auto [valid_left, valid_right] = estimateHand(
+				imgs[hand_ref_view],
+				hand_kps_3d,
+				hand_kps_2d,
+				hand_bbox,
+				hand_ref_view
+			);
+			pose_result.hand_kps_3d = std::move(hand_kps_3d);
+			pose_result.hand_kps_2d = std::move(hand_kps_2d);
+			pose_result.hand_bbox = std::move(hand_bbox);
+		}
+
+		// 拼接
+		for (int i = 20; i >= 0; --i) {
+			pose_result.hand_kps_3d[i] = pose_result.hand_kps_3d[i] - pose_result.hand_kps_3d[0] + pose_result.body_kps_3d[9];
+			pose_result.hand_kps_3d[i + 21] = pose_result.hand_kps_3d[i + 21] - pose_result.hand_kps_3d[21] + pose_result.body_kps_3d[10];
+		}
+
+		return;
 	}
 
 }

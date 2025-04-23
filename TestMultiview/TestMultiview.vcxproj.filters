@@ -1,0 +1,4496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="资源文件\calibration">
+      <UniqueIdentifier>{45afbcfa-df3c-4d13-97dd-d24a3d514ca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\frames">
+      <UniqueIdentifier>{382547be-ef71-4f42-99ec-d882a4404b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\frames\V0">
+      <UniqueIdentifier>{9d404a9d-e9a5-4c4f-966f-953b2e20531d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\frames\V1">
+      <UniqueIdentifier>{b2a904bc-8403-431d-8b5a-aca289548b3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="E:\BodyHandCapture\2025_04_22_1\calibration\camera_param.txt">
+      <Filter>资源文件\calibration</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000001.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000002.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000003.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000004.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000005.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000006.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000007.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000008.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000009.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000010.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000011.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000012.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000013.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000014.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000015.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000016.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000017.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000018.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000019.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000020.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000021.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000022.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000023.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000024.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000025.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000026.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000027.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000028.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000029.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000030.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000031.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000032.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000033.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000034.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000035.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000036.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000037.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000038.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000039.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000040.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000041.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000042.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000043.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000044.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000045.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000046.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000047.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000048.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000049.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000050.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000051.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000052.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000053.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000054.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000055.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000056.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000057.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000058.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000059.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000060.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000061.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000062.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000063.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000064.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000065.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000066.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000067.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000068.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000069.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000070.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000071.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000072.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000073.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000074.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000075.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000076.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000077.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000078.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000079.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000080.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000081.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000082.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000083.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000084.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000085.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000086.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000087.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000088.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000089.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000090.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000091.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000092.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000093.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000094.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000095.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000096.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000097.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000098.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000099.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000100.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000101.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000102.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000103.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000104.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000105.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000106.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000107.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000108.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000109.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000110.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000111.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000112.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000113.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000114.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000115.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000116.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000117.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000118.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000119.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000120.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000121.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000122.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000123.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000124.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000125.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000126.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000127.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000128.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000129.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000130.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000131.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000132.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000133.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000134.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000135.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000136.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000137.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000138.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000139.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000140.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000141.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000142.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000143.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000144.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000145.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000146.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000147.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000148.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000149.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000150.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000151.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000152.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000153.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000154.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000155.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000156.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000157.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000158.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000159.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000160.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000161.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000162.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000163.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000164.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000165.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000166.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000167.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000168.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000169.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000170.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000171.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000172.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000173.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000174.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000175.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000176.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000177.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000178.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000179.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000180.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000181.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000182.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000183.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000184.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000185.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000186.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000187.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000188.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000189.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000190.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000191.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000192.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000193.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000194.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000195.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000196.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000197.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000198.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000199.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000200.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000201.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000202.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000203.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000204.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000205.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000206.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000207.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000208.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000209.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000210.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000211.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000212.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000213.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000214.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000215.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000216.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000217.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000218.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000219.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000220.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000221.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000222.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000223.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000224.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000225.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000226.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000227.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000228.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000229.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000230.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000231.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000232.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000233.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000234.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000235.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000236.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000237.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000238.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000239.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000240.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000241.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000242.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000243.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000244.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000245.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000246.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000247.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000248.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000249.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000250.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000251.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000252.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000253.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000254.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000255.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000256.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000257.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000258.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000259.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000260.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000261.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000262.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000263.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000264.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000265.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000266.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000267.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000268.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000269.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000270.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000271.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000272.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000273.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000274.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000275.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000276.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000277.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000278.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000279.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000280.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000281.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000282.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000283.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000284.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000285.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000286.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000287.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000288.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000289.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000290.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000291.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000292.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000293.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000294.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000295.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000296.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000297.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000298.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000299.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000300.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000301.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000302.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000303.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000304.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000305.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000306.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000307.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000308.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000309.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000310.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000311.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000312.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000313.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000314.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000315.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000316.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000317.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000318.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000319.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000320.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000321.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000322.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000323.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000324.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000325.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000326.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000327.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000328.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000329.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000330.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000331.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000332.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000333.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000334.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000335.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000336.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000337.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000338.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000339.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000340.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000341.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000342.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000343.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000344.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000345.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000346.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000347.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000348.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000349.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000350.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000351.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000352.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000353.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000354.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000355.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000356.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000357.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000358.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000359.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000360.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000361.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000362.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000363.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000364.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000365.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000366.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000367.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000368.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000369.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000370.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000371.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000372.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000373.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000374.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000375.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000376.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000377.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000378.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000379.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000380.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000381.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000382.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000383.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000384.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000385.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000386.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000387.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000388.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000389.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000390.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000391.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000392.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000393.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000394.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000395.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000396.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000397.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000398.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000399.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000400.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000401.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000402.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000403.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000404.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000405.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000406.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000407.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000408.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000409.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000410.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000411.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000412.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000413.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000414.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000415.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000416.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000417.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000418.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000419.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000420.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000421.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000422.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000423.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000424.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000425.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000426.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000427.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000428.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000429.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000430.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000431.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000432.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000433.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000434.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000435.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000436.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000437.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000438.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000439.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000440.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000441.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000442.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000443.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000444.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000445.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000446.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000447.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000448.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000449.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000450.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000451.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000452.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000453.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000454.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000455.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000456.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000457.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000458.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000459.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000460.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000461.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000462.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000463.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000464.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000465.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000466.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000467.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000468.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000469.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000470.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000471.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000472.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000473.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000474.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000475.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000476.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000477.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000478.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000479.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000480.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000481.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000482.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000483.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000484.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000485.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000486.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000487.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000488.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000489.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000490.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000491.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000492.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000493.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000494.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000495.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000496.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000497.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000498.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000499.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000500.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000501.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000502.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000503.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000504.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000505.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000506.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000507.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000508.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000509.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000510.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000511.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000512.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000513.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000514.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000515.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000516.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000517.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000518.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000519.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000520.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000521.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000522.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000523.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000524.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000525.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000526.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000527.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000528.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000529.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000530.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000531.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000532.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000533.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000534.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000535.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000536.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000537.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000538.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000539.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000540.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000541.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000542.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000543.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000544.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000545.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000546.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000547.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000548.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000549.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000550.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000551.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000552.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000553.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000554.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000555.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000556.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000557.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000558.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000559.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000560.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000561.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000562.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000563.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000564.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000565.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000566.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000567.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000568.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000569.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000570.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000571.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000572.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000573.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000574.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000575.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000576.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000577.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000578.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000579.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000580.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000581.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000582.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000583.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000584.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000585.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000586.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000587.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000588.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000589.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000590.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000591.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000592.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000593.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000594.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000595.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000596.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000597.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000598.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000599.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000600.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000601.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000602.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000603.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000604.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000605.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000606.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000607.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000608.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000609.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000610.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000611.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000612.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000613.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000614.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000615.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000616.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000617.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000618.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000619.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000620.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000621.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000622.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000623.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000624.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000625.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000626.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000627.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000628.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000629.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000630.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000631.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000632.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000633.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000634.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000635.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000636.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000637.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000638.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000639.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000640.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000641.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000642.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000643.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000644.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000645.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000646.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000647.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000648.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000649.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000650.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000651.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000652.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000653.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000654.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000655.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000656.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000657.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000658.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000659.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000660.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000661.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000662.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000663.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000664.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000665.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000666.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000667.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000668.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000669.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000670.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000671.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000672.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000673.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000674.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000675.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000676.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000677.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000678.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000679.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000680.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000681.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000682.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000683.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000684.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000685.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000686.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000687.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000688.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000689.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000690.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000691.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000692.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000693.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000694.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000695.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000696.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000697.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000698.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000699.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000700.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000701.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000702.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000703.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000704.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000705.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000706.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000707.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000708.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000709.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000710.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000711.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000712.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000713.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000714.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000715.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000716.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000717.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000718.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000719.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000720.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000721.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000722.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000723.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000724.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000725.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000726.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000727.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000728.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000729.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000730.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000731.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000732.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000733.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000734.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000735.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000736.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000737.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000738.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000739.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000740.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000741.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V0\000742.jpg">
+      <Filter>资源文件\frames\V0</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000001.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000002.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000003.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000004.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000005.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000006.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000007.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000008.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000009.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000010.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000011.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000012.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000013.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000014.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000015.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000016.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000017.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000018.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000019.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000020.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000021.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000022.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000023.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000024.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000025.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000026.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000027.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000028.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000029.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000030.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000031.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000032.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000033.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000034.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000035.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000036.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000037.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000038.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000039.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000040.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000041.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000042.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000043.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000044.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000045.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000046.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000047.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000048.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000049.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000050.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000051.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000052.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000053.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000054.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000055.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000056.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000057.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000058.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000059.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000060.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000061.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000062.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000063.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000064.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000065.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000066.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000067.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000068.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000069.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000070.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000071.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000072.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000073.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000074.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000075.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000076.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000077.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000078.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000079.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000080.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000081.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000082.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000083.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000084.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000085.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000086.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000087.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000088.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000089.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000090.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000091.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000092.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000093.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000094.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000095.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000096.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000097.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000098.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000099.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000100.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000101.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000102.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000103.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000104.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000105.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000106.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000107.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000108.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000109.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000110.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000111.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000112.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000113.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000114.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000115.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000116.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000117.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000118.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000119.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000120.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000121.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000122.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000123.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000124.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000125.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000126.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000127.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000128.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000129.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000130.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000131.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000132.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000133.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000134.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000135.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000136.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000137.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000138.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000139.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000140.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000141.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000142.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000143.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000144.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000145.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000146.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000147.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000148.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000149.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000150.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000151.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000152.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000153.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000154.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000155.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000156.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000157.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000158.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000159.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000160.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000161.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000162.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000163.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000164.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000165.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000166.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000167.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000168.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000169.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000170.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000171.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000172.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000173.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000174.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000175.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000176.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000177.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000178.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000179.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000180.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000181.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000182.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000183.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000184.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000185.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000186.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000187.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000188.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000189.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000190.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000191.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000192.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000193.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000194.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000195.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000196.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000197.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000198.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000199.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000200.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000201.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000202.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000203.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000204.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000205.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000206.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000207.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000208.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000209.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000210.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000211.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000212.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000213.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000214.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000215.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000216.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000217.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000218.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000219.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000220.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000221.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000222.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000223.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000224.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000225.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000226.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000227.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000228.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000229.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000230.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000231.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000232.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000233.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000234.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000235.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000236.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000237.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000238.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000239.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000240.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000241.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000242.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000243.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000244.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000245.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000246.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000247.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000248.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000249.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000250.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000251.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000252.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000253.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000254.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000255.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000256.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000257.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000258.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000259.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000260.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000261.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000262.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000263.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000264.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000265.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000266.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000267.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000268.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000269.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000270.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000271.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000272.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000273.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000274.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000275.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000276.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000277.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000278.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000279.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000280.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000281.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000282.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000283.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000284.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000285.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000286.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000287.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000288.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000289.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000290.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000291.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000292.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000293.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000294.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000295.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000296.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000297.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000298.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000299.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000300.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000301.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000302.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000303.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000304.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000305.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000306.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000307.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000308.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000309.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000310.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000311.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000312.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000313.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000314.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000315.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000316.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000317.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000318.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000319.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000320.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000321.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000322.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000323.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000324.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000325.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000326.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000327.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000328.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000329.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000330.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000331.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000332.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000333.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000334.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000335.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000336.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000337.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000338.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000339.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000340.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000341.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000342.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000343.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000344.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000345.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000346.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000347.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000348.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000349.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000350.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000351.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000352.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000353.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000354.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000355.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000356.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000357.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000358.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000359.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000360.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000361.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000362.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000363.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000364.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000365.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000366.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000367.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000368.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000369.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000370.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000371.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000372.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000373.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000374.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000375.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000376.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000377.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000378.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000379.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000380.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000381.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000382.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000383.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000384.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000385.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000386.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000387.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000388.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000389.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000390.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000391.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000392.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000393.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000394.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000395.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000396.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000397.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000398.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000399.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000400.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000401.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000402.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000403.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000404.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000405.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000406.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000407.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000408.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000409.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000410.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000411.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000412.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000413.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000414.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000415.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000416.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000417.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000418.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000419.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000420.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000421.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000422.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000423.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000424.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000425.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000426.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000427.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000428.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000429.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000430.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000431.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000432.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000433.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000434.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000435.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000436.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000437.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000438.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000439.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000440.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000441.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000442.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000443.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000444.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000445.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000446.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000447.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000448.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000449.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000450.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000451.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000452.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000453.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000454.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000455.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000456.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000457.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000458.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000459.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000460.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000461.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000462.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000463.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000464.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000465.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000466.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000467.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000468.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000469.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000470.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000471.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000472.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000473.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000474.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000475.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000476.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000477.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000478.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000479.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000480.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000481.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000482.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000483.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000484.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000485.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000486.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000487.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000488.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000489.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000490.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000491.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000492.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000493.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000494.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000495.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000496.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000497.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000498.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000499.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000500.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000501.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000502.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000503.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000504.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000505.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000506.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000507.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000508.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000509.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000510.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000511.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000512.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000513.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000514.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000515.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000516.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000517.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000518.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000519.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000520.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000521.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000522.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000523.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000524.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000525.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000526.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000527.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000528.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000529.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000530.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000531.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000532.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000533.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000534.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000535.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000536.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000537.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000538.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000539.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000540.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000541.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000542.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000543.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000544.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000545.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000546.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000547.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000548.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000549.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000550.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000551.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000552.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000553.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000554.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000555.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000556.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000557.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000558.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000559.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000560.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000561.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000562.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000563.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000564.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000565.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000566.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000567.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000568.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000569.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000570.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000571.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000572.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000573.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000574.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000575.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000576.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000577.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000578.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000579.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000580.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000581.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000582.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000583.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000584.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000585.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000586.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000587.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000588.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000589.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000590.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000591.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000592.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000593.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000594.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000595.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000596.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000597.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000598.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000599.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000600.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000601.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000602.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000603.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000604.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000605.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000606.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000607.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000608.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000609.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000610.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000611.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000612.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000613.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000614.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000615.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000616.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000617.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000618.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000619.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000620.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000621.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000622.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000623.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000624.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000625.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000626.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000627.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000628.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000629.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000630.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000631.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000632.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000633.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000634.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000635.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000636.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000637.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000638.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000639.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000640.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000641.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000642.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000643.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000644.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000645.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000646.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000647.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000648.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000649.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000650.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000651.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000652.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000653.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000654.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000655.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000656.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000657.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000658.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000659.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000660.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000661.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000662.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000663.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000664.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000665.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000666.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000667.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000668.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000669.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000670.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000671.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000672.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000673.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000674.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000675.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000676.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000677.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000678.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000679.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000680.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000681.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000682.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000683.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000684.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000685.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000686.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000687.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000688.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000689.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000690.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000691.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000692.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000693.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000694.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000695.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000696.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000697.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000698.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000699.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000700.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000701.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000702.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000703.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000704.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000705.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000706.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000707.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000708.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000709.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000710.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000711.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000712.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000713.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000714.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000715.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000716.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000717.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000718.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000719.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000720.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000721.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000722.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000723.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000724.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000725.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000726.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000727.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000728.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000729.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000730.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000731.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000732.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000733.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000734.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000735.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000736.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000737.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000738.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000739.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000740.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000741.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+    <Image Include="E:\BodyHandCapture\2025_04_22_1\frames\V1\000742.jpg">
+      <Filter>资源文件\frames\V1</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main_Multiview.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

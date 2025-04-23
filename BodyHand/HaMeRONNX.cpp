@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "HaMeRONNX.h"
 
 namespace BodyHand {
@@ -192,11 +193,11 @@ namespace BodyHand {
         std::vector<float>,
         std::vector<float>,
         std::vector<float>
-    > HaMeROnnx::postProcessOutputTensor(std::vector<Ort::Value>& output_tensors, int hand_num) {
-        std::vector<float> hand_position = postProcessHandPosition(output_tensors, hand_num);
-        auto [hand_rotation, hand_rotation_aa] = postProcessHandRotation(output_tensors, hand_num);
-        std::vector<float> hand_shape = postProcessHandShape(output_tensors, hand_num);
-        std::vector<float> hand_2d = postProcessHand2D(output_tensors, hand_num);
+    > HaMeROnnx::postProcessOutputTensor(std::vector<Ort::Value>& output_tensors, int lr_flag) {
+        std::vector<float> hand_position = postProcessHandPosition(output_tensors, lr_flag);
+        auto [hand_rotation, hand_rotation_aa] = postProcessHandRotation(output_tensors, lr_flag);
+        std::vector<float> hand_shape = postProcessHandShape(output_tensors, lr_flag);
+        std::vector<float> hand_2d = postProcessHand2D(output_tensors, lr_flag);
         return {
             hand_position,
             hand_rotation,
@@ -372,12 +373,17 @@ namespace BodyHand {
         const cv::Mat intr,
         const std::vector<float> undist,
         std::vector<cv::Point3f>& hand_position_cam,
-        std::vector<cv::Point2f>& hand_position_2d
+        std::vector<cv::Point2f>& hand_position_2d,
+        std::optional<std::reference_wrapper<std::vector<cv::Rect2f>>> hand_bbox
     ) {
         hand_position_cam.clear();
         hand_position_cam.resize(42);
         hand_position_2d.clear();
         hand_position_2d.resize(42);
+        if (hand_bbox) {
+            std::vector<cv::Rect2f>& vec = hand_bbox->get();
+            vec.resize(2);
+        }
         bool valid_right{ false }, valid_left{ false };
 
         double scale_factor = 1.0f;
@@ -407,6 +413,10 @@ namespace BodyHand {
             {
             case 4: //左手
             {
+                if (hand_bbox) {
+                    std::vector<cv::Rect2f>& vec = hand_bbox->get();
+                    vec[0] = cv::Rect2f{x1, y1, x2 - x1, y2 - y1};
+                }
                 cv::Mat left_image = cropAndResize(img, x1, x2, y1, y2, scale_factor, 256);
                 //std::cout << scale_factor << std::endl;
                 cv::flip(left_image, left_image, 1); //沿 y轴 翻转  镜像翻转
@@ -419,33 +429,29 @@ namespace BodyHand {
                 std::vector<cv::Point3f> left_hand_cam = 
                     recoverPoseCam(hand_position_cv, hand_2d_cv, intr, undist);
 
-                std::copy(left_hand_cam.begin(), left_hand_cam.end(), hand_position_cam.begin() + 21);
-                std::copy(hand_2d_cv.begin(), hand_2d_cv.end(), hand_position_2d.begin() + 21);
+                std::copy(left_hand_cam.begin(), left_hand_cam.end(), hand_position_cam.begin());
+                std::copy(hand_2d_cv.begin(), hand_2d_cv.end(), hand_position_2d.begin());
                 valid_left = true;
             }
             break;
             case 5://右手
             {
+                if (hand_bbox) {
+                    std::vector<cv::Rect2f>& vec = hand_bbox->get();
+                    vec[1] = cv::Rect2f{ x1, y1, x2 - x1, y2 - y1 };
+                }
                 cv::Mat right_image = cropAndResize(img, x1, x2, y1, y2, scale_factor, 256);
                 hand_output_tensors = detectHandFromBox(right_image);
-                auto [
-                    hand_position,
-                    hand_rotation,
-                    hand_rotation_aa,
-                    hand_shape,
-                    hand_2d
-                ] = postProcessOutputTensor(hand_output_tensors, 1);
-                auto [
-                    hand_2d_restore,
-                    hand_position_cv,
-                    hand_2d_cv
-                ] = restorePose(hand_position, hand_2d, 1, scale_factor, center);
+                auto [hand_position, hand_rotation, hand_rotation_aa, hand_shape, hand_2d ] = 
+                    postProcessOutputTensor(hand_output_tensors, 1);
+                auto [ hand_2d_restore, hand_position_cv, hand_2d_cv] = 
+                    restorePose(hand_position, hand_2d, 1, scale_factor, center);
 
                 std::vector<cv::Point3f> right_hand_cam =
                     recoverPoseCam(hand_position_cv, hand_2d_cv, intr, undist);
 
-                std::copy(right_hand_cam.begin(), right_hand_cam.end(), hand_position_cam.begin());
-                std::copy(hand_2d_cv.begin(), hand_2d_cv.end(), hand_position_2d.begin());
+                std::copy(right_hand_cam.begin(), right_hand_cam.end(), hand_position_cam.begin() + 21);
+                std::copy(hand_2d_cv.begin(), hand_2d_cv.end(), hand_position_2d.begin() + 21);
                 valid_right = true;
             }
             break;
@@ -453,6 +459,12 @@ namespace BodyHand {
                 break;
             }
         }
-        return { valid_right, valid_left };
+        // 单位从米变成毫米
+        std::transform(
+            hand_position_cam.begin(), hand_position_cam.end(),
+            hand_position_cam.begin(),
+            [](auto& p) { return 1e3 * p; }
+        );
+        return { valid_left, valid_right };
     }
 }

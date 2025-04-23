@@ -26,16 +26,24 @@ int main() {
 	cv::Mat img = cv::imread("wangsit.jpg");
 	std::vector<cv::Point3f> kps_cam;
 	std::vector<cv::Point2f> kps_img;
-	pe.estimateHand(
+	auto [valid_left, valid_right] = pe.estimateHand(
 		img,
 		kps_cam,
 		kps_img,
 		0
 	);
 
-	for (auto j2d : kps_img) {
-		cv::circle(img, j2d, 3, cv::Scalar(0, 0, 255), -1);
+	if (valid_left) {
+		for (int i = 0; i < 21; ++i) {
+			cv::circle(img, kps_img[i], 3, cv::Scalar(0, 0, 255), -1);
+		}
 	}
+	if (valid_right) {
+		for (int i = 21; i < 42; ++i) {
+			cv::circle(img, kps_img[i], 3, cv::Scalar(0, 255, 255), 1);
+		}
+	}
+
 	cv::imshow("debug", img);
 	cv::waitKey(0);
 

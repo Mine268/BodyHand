@@ -19,7 +19,8 @@ namespace BodyHand {
 			IN const cv::Mat intr,
 			IN const std::vector<float> undist,
 			OUT std::vector<cv::Point3f>& hand_position_cam,
-			OUT std::vector<cv::Point2f>& hand_position_2d
+			OUT std::vector<cv::Point2f>& hand_position_2d,
+			OUT std::optional<std::reference_wrapper<std::vector<cv::Rect2f>>> hand_bbox = std::nullopt
 		);
 
 	private:
