@@ -10,7 +10,6 @@
 #define _MV_CAMERA_H_
 
 #include "MvCameraControl.h"
-#include <string.h>
 
 #ifndef MV_NULL
 #define MV_NULL    0

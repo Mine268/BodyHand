@@ -34,6 +34,12 @@
     <None Include="models\yolov8x-pose-p6.onnx">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="models\hand_mano.onnx">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="models\handLR_480x640.onnx">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="YoloONNX.h">

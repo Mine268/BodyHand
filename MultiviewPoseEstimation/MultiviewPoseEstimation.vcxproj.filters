@@ -15,33 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CMultiCap.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main_StereoCapture.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MultiCap.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MvCamera.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="stb_image_write.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stb_image_write.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MvCamera.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MultiCap.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CMultiCap.h">
+    <None Include="packages.config" />
+    <None Include="example_config.cfg">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="argparse.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

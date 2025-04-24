@@ -1,4 +1,6 @@
 #include "MvCamera.h"
+#include <cstring>
+
 
 CMvCamera::CMvCamera()
 {

@@ -22,8 +22,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{721ec176-9cc1-453c-bf1d-87f8a9f31d1c}</ProjectGuid>
-    <RootNamespace>BodyHand</RootNamespace>
+    <ProjectGuid>{3da3619b-9e7a-432f-9420-c7e3c0d0a586}</ProjectGuid>
+    <RootNamespace>MultiviewPoseEstimation</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -41,13 +41,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -106,10 +106,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)../BodyHand;$(ProjectDir)../SynchronizeCapture;C:\Program Files %28x86%29\MVS\Development\Includes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);C:\Program Files %28x86%29\MVS\Development\Libraries\win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>BodyHand.lib;SynchronizeCapture.lib;MvCameraControl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,35 +124,34 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)../BodyHand;$(ProjectDir)../SynchronizeCapture;C:\Program Files %28x86%29\MVS\Development\Includes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration);C:\Program Files %28x86%29\MVS\Development\Libraries\win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>BodyHand.lib;SynchronizeCapture.lib;MvCameraControl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="models\handLR_480x640.onnx" />
-    <None Include="models\hand_mano.onnx" />
-    <None Include="models\yolov8l-pose.onnx" />
-    <None Include="models\yolov8m-pose.onnx" />
-    <None Include="models\yolov8n-pose.onnx" />
-    <None Include="models\yolov8s-pose.onnx" />
-    <None Include="models\yolov8x-pose-p6.onnx" />
-    <None Include="models\yolov8x-pose.onnx" />
+    <ProjectReference Include="..\BodyHand\BodyHand.vcxproj">
+      <Project>{721ec176-9cc1-453c-bf1d-87f8a9f31d1c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SynchronizeCapture\SynchronizeCapture.vcxproj">
+      <Project>{a781b870-562e-4dde-bcd3-a8c7a0f5fdf8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="example_config.cfg" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="HaMeRONNX.h" />
-    <ClInclude Include="Pose3D.h" />
-    <ClInclude Include="YoloONNX.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="HaMeRONNX.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pose3D.cpp" />
-    <ClCompile Include="YoloONNX.cpp" />
+    <ClInclude Include="argparse.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

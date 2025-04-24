@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CMultiCap.cpp" />
+    <ClCompile Include="main_StereoCapture.cpp" />
+    <ClCompile Include="MultiCap.cpp" />
+    <ClCompile Include="MvCamera.cpp" />
+    <ClCompile Include="stb_image_write.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CMultiCap.h" />
+    <ClInclude Include="MultiCap.h" />
+    <ClInclude Include="MvCamera.h" />
+    <ClInclude Include="stb_image_write.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -134,17 +147,6 @@
       <AdditionalDependencies>MvCameraControl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="MvCamera.h" />
-    <ClInclude Include="stb_image_write.h" />
-    <ClInclude Include="SyncMultiCamera.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MvCamera.cpp" />
-    <ClCompile Include="stb_image_write.cpp" />
-    <ClCompile Include="SyncMultiCamera.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
