@@ -96,8 +96,9 @@ int main(int argc, char** argv) {
         auto end_time = std::chrono::duration_cast<std::chrono::microseconds>(
             std::chrono::system_clock::now().time_since_epoch()).count();
         auto cost_time = end_time - start_time;
-        if (cost_time > 0) {
-            std::this_thread::sleep_for(std::chrono::microseconds(cost_time));
+        auto rest_time = capture_duration - cost_time;
+        if (rest_time > 0) {
+            std::this_thread::sleep_for(std::chrono::microseconds(rest_time));
         }
 	}
 
