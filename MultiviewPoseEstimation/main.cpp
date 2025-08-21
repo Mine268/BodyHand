@@ -22,15 +22,18 @@ const std::vector<std::pair<int, int>> HAND_CONNECTION{
 	{17, 18}, {18, 19}, {19, 20}
 };
 
-void viz(
+// 可视化窗口
+cv::viz::Viz3d window("Pose");
+
+void updateViz(
 	const std::vector<cv::Point3f>& body_kps,
 	const std::vector<cv::Point3f>& hand_kps,
 	const std::vector<std::pair<int, int>>& body_connection = BODY_CONNECTION,
 	const std::vector<std::pair<int, int>>& hand_connection = HAND_CONNECTION
 
 ) {
-	cv::viz::Viz3d window("Pose");
-	window.setBackgroundColor(cv::viz::Color::white());
+	window.removeAllWidgets();
+	//window.setBackgroundColor(cv::viz::Color::white());
 
 	cv::Mat body_points_mat(body_kps.size(), 1, CV_32FC3);
 	for (size_t i = 0; i < body_kps.size(); ++i) {
@@ -93,7 +96,8 @@ void viz(
 		window.showWidget("HandRLine_" + std::to_string(idx1) + "_" + std::to_string(idx2), lineR);
 	}
 
-	window.spin();
+	//window.spin();
+	window.spinOnce(1, true);
 }
 
 int main(int argc, char** argv) {
@@ -195,6 +199,37 @@ int main(int argc, char** argv) {
 		return -1;
 	}
 	start_grabbing();
+
+	// 4. 初始化可视化窗口
+	window.setBackgroundColor(cv::viz::Color::white());
+	window.spinOnce(1, true);
+
+	// debug. 从图像中进行姿态估计的测试代码
+	//std::cout << "Start capturing and estimating" << std::endl;
+	//for (int i = 1; i < 230; ++i) {
+	//	BodyHand::PoseResult pose_result;
+	//	cv::Mat img0 = cv::imread(std::format("E:\\tmp\\cap1\\V0\\{:06}.jpg", i));
+	//	cv::Mat img1 = cv::imread(std::format("E:\\tmp\\cap1\\V1\\{:06}.jpg", i));
+	//	std::vector<cv::Mat> imgs{img0, img1};
+	//	pe.estimatePose(imgs, pose_result, 0);
+	//	updateViz(pose_result.body_kps_3d, pose_result.hand_kps_3d);
+	//	if (window.wasStopped()) {
+	//		break;
+	//	}
+
+	//	for (auto& person_kps : pose_result.body_kps_2d[0]) {
+	//		for (auto& kps : person_kps) {
+	//			cv::circle(img0, kps, 3, cv::Scalar(0, 0, 255.0), -1);
+	//		}
+	//	}
+	//	for (auto& hand_kps : pose_result.hand_kps_2d) {
+	//		cv::circle(img0, hand_kps, 3, cv::Scalar(0, 255., 255.0), -1);
+	//	}
+	//	cv::imshow("view0", img0);
+
+	//	cv::waitKey(50);
+	//}
+
 	do {
 		auto cap_info = capture();
 		if (cap_info.flag) {
@@ -206,7 +241,10 @@ int main(int argc, char** argv) {
 				imgs.emplace_back(std::move(img_bgr));
 			}
 			pe.estimatePose(imgs, pose_result, 0);
-			viz(pose_result.body_kps_3d, pose_result.hand_kps_3d);
+			updateViz(pose_result.body_kps_3d, pose_result.hand_kps_3d);
+			if (window.wasStopped()) {
+				break;
+			}
 			cv::waitKey(50);
 		}
 	} while (true);
