@@ -50,3 +50,7 @@
 /TestHandEstimation/x64/Release
 /TestMultiview/x64
 /MultiviewPoseEstimation/x64
+/SynchronizeCapture/V0
+/SynchronizeCapture/V1
+/TestCapture/x64
+/MultiViewPoseEstimation2/x64/Release

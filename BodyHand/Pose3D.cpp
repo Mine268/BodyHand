@@ -223,20 +223,23 @@ namespace BodyHand {
 			std::vector<std::vector<std::vector<cv::Point2f>>> body_kps_2d;
 			std::vector<std::vector<std::vector<float>>> body_kps_conf;
 			std::vector<std::vector<float>> body_conf;
-			bool valid_body = estimateBody(imgs, body_kps_2d, body_kps_conf, body_conf);
+			bool valid_body = estimateBody(imgs, body_kps_2d, body_kps_conf, body_conf); // 返回值表示推理是否完成
+			bool all_detect_2d = std::all_of(body_kps_2d.begin(), body_kps_2d.end(),
+				[](const auto& kps) { return !kps.empty(); }); // 所有视图都检测到人体
 
 			// 每个视图默认选第0个人
-			std::vector<std::vector<cv::Point2f>> body_kps_2d_selected;
-			for (const auto& k2d : body_kps_2d) {
-				body_kps_2d_selected.emplace_back(k2d[0]);
+			std::vector<cv::Point3f> body_kps_3d;
+			if (all_detect_2d) {
+				std::vector<std::vector<cv::Point2f>> body_kps_2d_selected;
+				for (const auto& k2d : body_kps_2d) {
+					body_kps_2d_selected.emplace_back(k2d[0]);
+				}
+				// 多视图三角化
+				body_kps_3d = triangulate2DPoints(body_kps_2d_selected);
 			}
 
-			// 多视图三角化
-			std::vector<cv::Point3f> body_kps_3d;
-			body_kps_3d = triangulate2DPoints(body_kps_2d_selected);
-
 			// 结果存入
-			pose_result.valid_body = valid_body;
+			pose_result.valid_body = valid_body && all_detect_2d; // 表示三维姿态是否有效
 			pose_result.body_kps_3d = std::move(body_kps_3d);
 			pose_result.body_kps_2d = std::move(body_kps_2d);
 			pose_result.body_kps_conf = std::move(body_kps_conf);
@@ -263,9 +266,11 @@ namespace BodyHand {
 		}
 
 		// 拼接
-		for (int i = 20; i >= 0; --i) {
-			pose_result.hand_kps_3d[i] = pose_result.hand_kps_3d[i] - pose_result.hand_kps_3d[0] + pose_result.body_kps_3d[9];
-			pose_result.hand_kps_3d[i + 21] = pose_result.hand_kps_3d[i + 21] - pose_result.hand_kps_3d[21] + pose_result.body_kps_3d[10];
+		if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
+			for (int i = 20; i >= 0; --i) {
+				pose_result.hand_kps_3d[i] = pose_result.hand_kps_3d[i] - pose_result.hand_kps_3d[0] + pose_result.body_kps_3d[9];
+				pose_result.hand_kps_3d[i + 21] = pose_result.hand_kps_3d[i + 21] - pose_result.hand_kps_3d[21] + pose_result.body_kps_3d[10];
+			}
 		}
 
 		return;

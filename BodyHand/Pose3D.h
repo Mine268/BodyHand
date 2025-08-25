@@ -31,7 +31,7 @@ namespace BodyHand
 	};
 
 	struct PoseResult {
-		bool valid_body, valid_left, valid_right;
+		bool valid_body{ false }, valid_left{ false }, valid_right{ false };
 		std::vector<cv::Point3f> body_kps_3d{};
 		std::vector<std::vector<std::vector<cv::Point2f>>> body_kps_2d{};
 		std::vector<std::vector<std::vector<float>>> body_kps_conf{};
@@ -39,6 +39,18 @@ namespace BodyHand
 		std::vector<cv::Point3f> hand_kps_3d{};
 		std::vector<cv::Point2f> hand_kps_2d{};
 		std::vector<cv::Rect2f> hand_bbox{}; // xywh
+
+		bool handValid() const {
+			return valid_left && valid_right;
+		}
+
+		bool bodyValid() const {
+			return valid_body;
+		}
+
+		bool allValid() const {
+			return valid_body && (valid_left && valid_right);
+		}
 	};
 
 	/// <summary>
