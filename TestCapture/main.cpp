@@ -225,7 +225,10 @@ int main(int argc, char** argv) {
 	window.spinOnce(1, true);
 
 	// ******** 捕捉和姿态估计 ********
-	std::ofstream pose_ofs(get_time_string() + "_pose_output.txt"); // 按照当前日期命名的姿态输出文件
+	std::filesystem::path config_path_obj(config_path);
+	std::string pose_output_path = config_path_obj.parent_path().string() + '/' + get_time_string() + "_pose_output.txt";
+	std::ofstream pose_ofs(pose_output_path); // 按照当前日期命名的姿态输出文件
+	std::cout << "姿态数据保存至：" << pose_output_path << std::endl;
 	do {
 		auto cap_info = capture();
 		if (cap_info.flag) {
@@ -234,16 +237,22 @@ int main(int argc, char** argv) {
 			for (int i = 0; i < num_view; ++i) {
 				cv::Mat img_rgb(cap_info.height[i], cap_info.width[i], CV_8UC3, cap_info.ppbuffer[i]), img_bgr;
 				cv::cvtColor(img_rgb, img_bgr, cv::COLOR_RGB2BGR);
-				cv::imshow(std::format("{}", i), img_bgr);
+				//cv::imshow(std::format("{}", i), img_bgr);
 				imgs.emplace_back(std::move(img_bgr));
 			}
-			cv::waitKey(1);
+			//cv::waitKey(1);
 
 			pe.estimatePose(imgs, pose_result, 0);
 			if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
 				std::cout << "Found pose\n";
 				std::string time_string = get_time_string();
-				// 可视化到opencv
+				// 可视化手部检测
+				cv::Mat hand_ref_img = imgs[0];
+				for (const auto& rect : pose_result.hand_bbox) {
+					cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
+				}
+				cv::imshow("Hand detection", hand_ref_img);
+				// 3D可视化到opencv
 				updateViz(pose_result.body_kps_3d, pose_result.hand_kps_3d);
 				// 存储到文件，每行第一个是时间戳
 				pose_ofs << time_string << ' ';
