@@ -955,7 +955,7 @@ bool multiCameraCalibrationAndSave(std::string& calibrationDir,
 	std::vector<cv::Point3d> worldPoints;
 	std::cout << "calibration dir: " << calibrationDir << std::endl;
 	PaperCalibration_pnp(cameraList, worldPoints, cornersCountPerImage, is_fix_instrinic);	
-
+	
 	SaveCameraControllerToFile(calibrationDir + "/" + "camera_param.txt", cameraList, worldPoints);
 
 	viz(cameraList, worldPoints);

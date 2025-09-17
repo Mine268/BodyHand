@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiviewPoseEstimation2", 
 		{721EC176-9CC1-453C-BF1D-87F8A9F31D1C} = {721EC176-9CC1-453C-BF1D-87F8A9F31D1C}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SingleCalibration", "SingleCalibration\SingleCalibration.vcxproj", "{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -100,6 +102,14 @@ Global
 		{C18ABEF0-244D-4946-8750-5205C588D866}.Release|x64.Build.0 = Release|x64
 		{C18ABEF0-244D-4946-8750-5205C588D866}.Release|x86.ActiveCfg = Release|Win32
 		{C18ABEF0-244D-4946-8750-5205C588D866}.Release|x86.Build.0 = Release|Win32
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Debug|x64.ActiveCfg = Debug|x64
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Debug|x64.Build.0 = Debug|x64
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Debug|x86.ActiveCfg = Debug|Win32
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Debug|x86.Build.0 = Debug|Win32
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Release|x64.ActiveCfg = Release|x64
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Release|x64.Build.0 = Release|x64
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Release|x86.ActiveCfg = Release|Win32
+		{4934264E-B7F4-48A6-BD2D-BF9E6278BB4F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
