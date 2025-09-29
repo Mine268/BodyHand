@@ -14,6 +14,7 @@
 #include "argparse.h"
 #include "Pose3D.h"
 #include "CMultiCap.h"
+#include "tcp_server.h"
 
 const std::vector<std::pair<int, int>> BODY_CONNECTION{
 	{0, 1}, {0, 2}, {1, 3}, {2, 4},
@@ -30,86 +31,6 @@ const std::vector<std::pair<int, int>> HAND_CONNECTION{
 	{17, 18}, {18, 19}, {19, 20}
 };
 
-
-
-// 可视化窗口
-cv::viz::Viz3d window("Pose");
-
-void updateViz(
-	const std::vector<cv::Point3f>& body_kps,
-	const std::vector<cv::Point3f>& hand_kps,
-	const std::vector<std::pair<int, int>>& body_connection = BODY_CONNECTION,
-	const std::vector<std::pair<int, int>>& hand_connection = HAND_CONNECTION
-
-) {
-	window.removeAllWidgets();
-	//window.setBackgroundColor(cv::viz::Color::white());
-
-	cv::Mat body_points_mat(body_kps.size(), 1, CV_32FC3);
-	for (size_t i = 0; i < body_kps.size(); ++i) {
-		body_points_mat.at<cv::Vec3f>(i, 0) = cv::Vec3f(
-			body_kps[i].x,
-			body_kps[i].y,
-			body_kps[i].z
-		);
-	}
-
-	// 1. 显示所有点
-	for (size_t i = 0; i < body_kps.size(); ++i) {
-		// 创建小球体：参数为(中心坐标, 半径, 细分精度, 颜色)
-		cv::viz::WSphere sphere(
-			body_kps[i], // 点坐标
-			10.0, // 半径（控制粗细）
-			10, // 细分精度（值越高越圆滑）
-			cv::viz::Color::red() // 颜色
-		);
-		window.showWidget("BodySphere_" + std::to_string(i), sphere);
-	}
-	for (size_t i = 0; i < hand_kps.size(); ++i) {
-		cv::viz::WSphere sphere(
-			hand_kps[i],
-			7.0,
-			10,
-			(i < 21) ? cv::viz::Color::blue() : cv::viz::Color::green()
-		);
-		window.showWidget("HandSphere_" + std::to_string(i), sphere);
-	}
-
-	// 2. 绘制连接线
-	for (const auto& conn : body_connection) {
-		int idx1 = conn.first;
-		int idx2 = conn.second;
-
-		// 创建线段（起点，终点，颜色）
-		cv::viz::WLine line(
-			body_kps[idx1],
-			body_kps[idx2],
-			cv::viz::Color::gray()
-		);
-		window.showWidget("BodyLine_" + std::to_string(idx1) + "_" + std::to_string(idx2), line);
-	}
-	for (const auto& conn : hand_connection) {
-		int idx1 = conn.first;
-		int idx2 = conn.second;
-
-		cv::viz::WLine lineL(
-			hand_kps[idx1],
-			hand_kps[idx2],
-			cv::viz::Color::gray()
-		);
-		cv::viz::WLine lineR(
-			hand_kps[idx1 + 21],
-			hand_kps[idx2 + 21],
-			cv::viz::Color::gray()
-		);
-		window.showWidget("HandLLine_" + std::to_string(idx1) + "_" + std::to_string(idx2), lineL);
-		window.showWidget("HandRLine_" + std::to_string(idx1) + "_" + std::to_string(idx2), lineR);
-	}
-
-	//window.spin();
-	window.spinOnce(1, true);
-}
-
 std::string get_time_string() {
 	auto now = std::chrono::system_clock::now();
 	std::time_t now_c = std::chrono::system_clock::to_time_t(now);
@@ -119,21 +40,141 @@ std::string get_time_string() {
 	return std::string(buffer);
 }
 
+std::string get_tcp_data_string(const BodyHand::PoseResult& pose_result) {
+	std::string data{};
+	// Body
+	if (pose_result.valid_body) {
+		for (const auto& kp : pose_result.body_kps_3d) {
+			data += std::to_string(kp.x) + ", " + std::to_string(kp.y) + ", " + std::to_string(kp.z) + ", ";
+		}
+	}
+	else {
+		for (size_t i = 0; i < 17; ++i) {
+			data += "0, 0, 0, ";
+		}
+	}
+	// Hand
+	if (pose_result.valid_left && pose_result.valid_right) {
+		for (const auto& kp : pose_result.hand_kps_3d) {
+			data += std::to_string(kp.x) + ", " + std::to_string(kp.y) + ", " + std::to_string(kp.z) + ", ";
+		}
+	}
+	else {
+		for (size_t i = 0; i < 42; ++i) {
+			data += "0, 0, 0, ";
+		}
+	}
+	// 移除最后的逗号和空格
+	if (data.size() >= 2) {
+		data.pop_back();
+		data.pop_back();
+	}
+	return data;
+}
+
+BodyHand::PoseResult apply_trans(
+	const BodyHand::PoseResult& pose,
+	const cv::Mat &rmat /* (3,3) */,
+	const cv::Mat &tvec /* (3,1) */) {
+	BodyHand::PoseResult new_pose = pose;
+	if (pose.valid_body) {
+		for (auto& kp : new_pose.body_kps_3d) {
+			cv::Mat pt = (cv::Mat_<float>(3, 1) << kp.x, kp.y, kp.z);
+			cv::Mat new_pt = rmat * pt + tvec;
+			kp.x = new_pt.at<float>(0);
+			kp.y = new_pt.at<float>(1);
+			kp.z = new_pt.at<float>(2);
+		}
+	}
+	if (pose.valid_left) {
+		for (size_t i = 0; i < 21; ++i) {
+			cv::Point3f& kp = new_pose.hand_kps_3d[i];
+			cv::Mat pt = (cv::Mat_<float>(3, 1) << kp.x, kp.y, kp.z);
+			cv::Mat new_pt = rmat * pt + tvec;
+			kp.x = new_pt.at<float>(0);
+			kp.y = new_pt.at<float>(1);
+			kp.z = new_pt.at<float>(2);
+		}
+	}
+	if (pose.valid_right) {
+		for (size_t i = 21; i < 42; ++i) {
+			cv::Point3f& kp = new_pose.hand_kps_3d[i];
+			cv::Mat pt = (cv::Mat_<float>(3, 1) << kp.x, kp.y, kp.z);
+			cv::Mat new_pt = rmat * pt + tvec;
+			kp.x = new_pt.at<float>(0);
+			kp.y = new_pt.at<float>(1);
+			kp.z = new_pt.at<float>(2);
+		}
+	}
+	return new_pose;
+}
+
+cv::Mat plot_2d_result(const std::vector<cv::Mat>& imgs, const BodyHand::PoseResult& pose, int idx) {
+	cv::Mat img_vis = imgs[idx].clone();
+	if (pose.valid_body) {
+		for (size_t i = 0; i < pose.body_kps_2d[idx].size(); ++i) {
+			const auto& kps = pose.body_kps_2d[idx][i];
+			for (size_t j = 0; j < kps.size(); ++j) {
+				cv::circle(img_vis, kps[j], 3, cv::Scalar(0, 255, 0), -1);
+			}
+			for (const auto& conn : BODY_CONNECTION) {
+				if (kps[conn.first].x > 0 && kps[conn.first].y > 0 &&
+					kps[conn.second].x > 0 && kps[conn.second].y > 0) {
+					cv::line(img_vis, kps[conn.first], kps[conn.second], cv::Scalar(255, 0, 0), 2);
+				}
+			}
+		}
+	}
+	if (pose.valid_left) {
+		const auto& kps = pose.hand_kps_2d;
+		for (size_t j = 0; j < 21; ++j) {
+			cv::circle(img_vis, kps[j], 3, cv::Scalar(0, 255, 255), -1);
+		}
+		for (const auto& conn : HAND_CONNECTION) {
+			if (kps[conn.first].x > 0 && kps[conn.first].y > 0 &&
+				kps[conn.second].x > 0 && kps[conn.second].y > 0) {
+				cv::line(img_vis, kps[conn.first], kps[conn.second], cv::Scalar(255, 255, 0), 2);
+			}
+		}
+	}
+	if (pose.valid_right) {
+		const auto& kps = pose.hand_kps_2d;
+		for (size_t j = 21; j < 42; ++j) {
+			cv::circle(img_vis, kps[j], 3, cv::Scalar(0, 255, 255), -1);
+		}
+		for (const auto& conn : HAND_CONNECTION) {
+			if (kps[conn.first + 21].x > 0 && kps[conn.first + 21].y > 0 &&
+				kps[conn.second + 21].x > 0 && kps[conn.second + 21].y > 0) {
+				cv::line(img_vis, kps[conn.first + 21], kps[conn.second + 21], cv::Scalar(255, 255, 0), 2);
+			}
+		}
+	}
+	return img_vis;
+}
+
 int main(int argc, char** argv) {
 
 	// ******** 参数解析 ********
 	std::string config_path;
+	bool send_tcp = false;
+	bool no_write_file = false;
+
 	argparse::ArgumentParser parser("Pose estimation");
 	parser.add_description(
 		"从配置文件中读取模型信息和相机标定信息，进行姿态估计。"
 		"\n\t第一、二、三行：分别是人体姿态估计模型，人体检测模型，手部姿态估计模型的地址"
 		"\n\t第四行是一个正整数n，表示总共有多少个视图"
 		"\n\t接下来的n行每行有26个浮点数，前9个表示内参矩阵，接着的9个表示旋转变换矩阵，然后3个表示位移变换向量，最后的5个表示畸变参数"
+		"\n\t最后一行是可写可不写的，用来表示如何从相机坐标系变换到全局坐标系，包含12个浮点数，描述的是全局坐标系在相机坐标系下的三轴方向和原点偏移"
 	);
 	parser.add_argument("config_path").help("配置文件地址");
+	parser.add_argument("--send_tcp").help("是否通过TCP发送姿态数据").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--no_write_file").help("是否将结果写入文件").default_value(false).implicit_value(true).nargs(0);
 	try {
 		parser.parse_args(argc, argv);
 		config_path = parser.get<std::string>("config_path");
+		send_tcp = parser.get<bool>("--send_tcp");
+		no_write_file = parser.get<bool>("--no_write_file");
 	}
 	catch (const std::runtime_error& err) {
 		std::cerr << err.what() << std::endl;
@@ -143,10 +184,13 @@ int main(int argc, char** argv) {
 	BodyHand::BodyModelConfig body_cfg;
 	BodyHand::HandModelConfig hand_cfg;
 	int num_view;
+	// 双视图标定
 	std::vector<cv::Mat> intr;
 	std::vector<cv::Mat> rot_trans;
 	std::vector<cv::Mat> transl_trans;
 	std::vector<std::vector<float>> undist;
+	// 单视图标定
+	cv::Mat rot_world, trans_world;
 
 	std::ifstream config_file(config_path);
 	// 配置文件读取
@@ -197,6 +241,29 @@ int main(int argc, char** argv) {
 		// 4. 畸变参数 5个 (最后5个元素)
 		undist.emplace_back(std::vector<float> {data[21], data[22], data[23], data[24], data[25]});
 	}
+	// 最后12个参数是单视图标定数据，如果没有提供则使用单位阵和零向量
+	bool world_coord_data_valid{ true };
+	float world_coord_data[12];
+	for (int j = 0; j < 12; ++j) {
+		if (!(config_file >> world_coord_data[j])) { // 读取失败处理
+			std::cerr << "无法读取单视图标定数据。" << std::endl;
+			world_coord_data_valid = false;
+			break;
+		}
+	}
+	// 读取单视图标定数据
+	if (world_coord_data_valid) {
+		rot_world = cv::Mat(3, 3, CV_32F, world_coord_data);
+		trans_world = cv::Mat(3, 1, CV_32F, world_coord_data + 9);
+		// 求逆
+		rot_world = rot_world.t();
+		trans_world = -rot_world * trans_world;
+	}
+	else { // 如果没有提供单视图标定数据，则使用单位阵和零向量，即姿态位于相机坐标系
+		rot_world = cv::Mat3f::eye(3, 3);
+		trans_world = cv::Mat3f::ones(3, 1);
+	}
+
 	config_file.close();
 
 	// ******** 构造姿态估计器 ********
@@ -210,6 +277,29 @@ int main(int argc, char** argv) {
 		undist
 	};
 
+	// ******** TCP服务端 ********
+	SOCKET ls{}, cs{};
+	if (send_tcp) {
+		if (!InitWinsock()) {
+			std::cerr << "Winsock 初始化失败，无法启动 TCP 服务器。" << std::endl;
+			return -1;
+		}
+		ls = CreateListeningSocket("5175");
+		if (ls == INVALID_SOCKET) {
+			std::cerr << "创建监听套接字失败，无法启动 TCP 服务器。" << std::endl;
+			WSACleanup();
+			return -1;
+		}
+		cs = AcceptClient(ls);
+		if (cs == INVALID_SOCKET) {
+			std::cerr << "接受客户端连接失败，无法启动 TCP 服务器。" << std::endl;
+			CloseSocket(ls);
+			CleanupWinsock();
+			return -1;
+		}
+		std::cout << "客户端已连接，可以发送数据。" << std::endl;
+	}
+
 	// ******** 构造捕捉系统 ********
 	get_app();
 	init_device();
@@ -219,16 +309,18 @@ int main(int argc, char** argv) {
 		return -1;
 	}
 	start_grabbing();
-	
-	// ******** 初始化可视化窗口 ********
-	window.setBackgroundColor(cv::viz::Color::white());
-	window.spinOnce(1, true);
 
 	// ******** 捕捉和姿态估计 ********
 	std::filesystem::path config_path_obj(config_path);
 	std::string pose_output_path = config_path_obj.parent_path().string() + '/' + get_time_string() + "_pose_output.txt";
-	std::ofstream pose_ofs(pose_output_path); // 按照当前日期命名的姿态输出文件
-	std::cout << "姿态数据保存至：" << pose_output_path << std::endl;
+	std::ofstream pose_ofs; // 按照当前日期命名的姿态输出文件
+	if (!no_write_file) {
+		pose_ofs.open(pose_output_path);
+		std::cout << "姿态数据保存至：" << pose_output_path << std::endl;
+	}
+	else {
+		std::cout << "不保存姿态数据。" << std::endl;
+	}
 	do {
 		auto cap_info = capture();
 		if (cap_info.flag) {
@@ -240,39 +332,61 @@ int main(int argc, char** argv) {
 				//cv::imshow(std::format("{}", i), img_bgr);
 				imgs.emplace_back(std::move(img_bgr));
 			}
-			//cv::waitKey(1);
+			if (cv::waitKey(20) == 'q') {
+				break;
+			}
 
+			// 进行姿态估计
 			pe.estimatePose(imgs, pose_result, 0);
+			// 将相机空间姿态变换到全局坐标系
+			pose_result = apply_trans(pose_result, rot_world, trans_world);
+
 			if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
 				std::cout << "Found pose\n";
 				std::string time_string = get_time_string();
+
 				// 可视化手部检测
-				cv::Mat hand_ref_img = imgs[0];
-				for (const auto& rect : pose_result.hand_bbox) {
-					cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
+				//cv::Mat hand_ref_img = imgs[0];
+				//for (const auto& rect : pose_result.hand_bbox) {
+				//	cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
+				//}
+				//cv::imshow("Hand detection", hand_ref_img);
+
+				// 可视化2D结果
+				cv::Mat img_2d = plot_2d_result(imgs, pose_result, 0);
+				cv::imshow("2D Result", img_2d);
+
+				if (!no_write_file) {
+					// 存储到文件，每行第一个是时间戳
+					pose_ofs << time_string << ' ';
+					// 然后是全部3d人体关节点坐标
+					for (const auto& kp : pose_result.body_kps_3d) {
+						pose_ofs << kp.x << ' ' << kp.y << ' ' << kp.z << ' ';
+					}
+					// 然后是全部42个手部关节点坐标，先左后右
+					for (const auto& kp : pose_result.hand_kps_3d) {
+						pose_ofs << kp.x << ' ' << kp.y << ' ' << kp.z << ' ';
+					}
+					pose_ofs << '\n';
 				}
-				cv::imshow("Hand detection", hand_ref_img);
-				// 3D可视化到opencv
-				updateViz(pose_result.body_kps_3d, pose_result.hand_kps_3d);
-				// 存储到文件，每行第一个是时间戳
-				pose_ofs << time_string << ' ';
-				// 然后是全部3d人体关节点坐标
-				for (const auto& kp : pose_result.body_kps_3d) {
-					pose_ofs << kp.x << ' ' << kp.y << ' ' << kp.z << ' ';
-				}
-				// 然后是全部42个手部关节点坐标，先左后右
-				for (const auto& kp : pose_result.hand_kps_3d) {
-					pose_ofs << kp.x << ' ' << kp.y << ' ' << kp.z << ' ';
-				}
-				pose_ofs << '\n';
+
+				// 如果开启了TCP发送，则拼接字符串并发送：x1, y1, z1, x2, y2, z2, ...
+				if (!send_tcp) continue;
+				std::string tcp_data = get_tcp_data_string(pose_result);
+				SendTextLine(cs, tcp_data);
 			}
-			if (window.wasStopped()) {
-				break;
-			}
-			cv::waitKey(50);
 		}
 	} while (true);
-	pose_ofs.close();
+	if (!no_write_file) {
+		pose_ofs.close();
+	}
+
+	// ******** 关闭TCP连接 ********
+	if (send_tcp) {
+		std::cout << "关闭 TCP 服务器..." << std::endl;
+		CloseSocket(ls);
+		CleanupWinsock();
+	}
 
 	// ******** 停止捕捉和释放资源 ********
 	stop_grabbing();
