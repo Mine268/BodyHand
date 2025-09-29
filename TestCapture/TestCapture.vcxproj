@@ -140,6 +140,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MultiCap.cpp" />
     <ClCompile Include="MvCamera.cpp" />
+    <ClCompile Include="tcp_server.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SynchronizeCapture\SynchronizeCapture.vcxproj">
@@ -151,6 +152,7 @@
     <ClInclude Include="CMultiCap.h" />
     <ClInclude Include="MultiCap.h" />
     <ClInclude Include="MvCamera.h" />
+    <ClInclude Include="tcp_server.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
