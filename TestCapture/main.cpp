@@ -263,7 +263,7 @@ int main(int argc, char** argv) {
 		rot_world = cv::Mat3f::eye(3, 3);
 		trans_world = cv::Mat3f::ones(3, 1);
 	}
-
+	std::cout << "配置文件读取完成。" << std::endl;
 	config_file.close();
 
 	// ******** 构造姿态估计器 ********
@@ -276,6 +276,7 @@ int main(int argc, char** argv) {
 		transl_trans,
 		undist
 	};
+	std::cout << "姿态估计器构造完成。" << std::endl;
 
 	// ******** TCP服务端 ********
 	SOCKET ls{}, cs{};

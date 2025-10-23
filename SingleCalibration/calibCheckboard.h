@@ -64,9 +64,10 @@ inline bool estimatePoseFromChessboard(const cv::Mat& image,
     }
 
     std::vector<cv::Point2f> corners;
-    const int findFlags = cv::CALIB_CB_ADAPTIVE_THRESH |
-        cv::CALIB_CB_NORMALIZE_IMAGE |
-        cv::CALIB_CB_FAST_CHECK; // 可按需移除 FAST_CHECK 以提高召回
+    const int findFlags =
+        cv::CALIB_CB_ADAPTIVE_THRESH |
+        cv::CALIB_CB_NORMALIZE_IMAGE;
+        //cv::CALIB_CB_FAST_CHECK; // 可按需移除 FAST_CHECK 以提高召回
     bool found = cv::findChessboardCorners(gray, boardSize, corners, findFlags);
     if (!found) {
         std::cerr << "[estimatePoseFromChessboard] chessboard not found.\n";
@@ -75,7 +76,7 @@ inline bool estimatePoseFromChessboard(const cv::Mat& image,
 
     // 亚像素精细化
     cv::cornerSubPix(
-        gray, corners, cv::Size(11, 11), cv::Size(-1, -1),
+        gray, corners, cv::Size(5, 5), cv::Size(-1, -1),
         cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::COUNT, 30, 0.01)
     );
 
