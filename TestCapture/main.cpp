@@ -7,6 +7,7 @@
 #include <string>
 #include <chrono>
 #include <ctime>
+#include <iomanip>
 
 #include <opencv2/opencv.hpp>
 #include <opencv2/viz.hpp>
@@ -32,12 +33,34 @@ const std::vector<std::pair<int, int>> HAND_CONNECTION{
 };
 
 std::string get_time_string() {
+	// 1. 获取当前的高精度时间点
 	auto now = std::chrono::system_clock::now();
-	std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+
+	// 2. 将时间点转换为 std::time_t (秒级精度) 和秒级时间点
+	auto now_seconds = std::chrono::time_point_cast<std::chrono::seconds>(now);
+	std::time_t now_c = std::chrono::system_clock::to_time_t(now_seconds);
+
+	// 3. 计算自秒初以来的毫秒数
+	auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(now - now_seconds);
+	int milliseconds = static_cast<int>(ms.count());
+
+	// 4. 将 std::time_t 转换为本地时间结构体
+	// 注意：std::localtime 不是线程安全的，在多线程环境应使用 std::localtime_r (POSIX) 或其他线程安全方法
 	std::tm* parts = std::localtime(&now_c);
-	char buffer[20];
-	std::strftime(buffer, sizeof(buffer), "%Y%m%d_%H%M%S", parts);
-	return std::string(buffer);
+
+	// 5. 格式化日期和时间 (不含毫秒)
+	// 使用 std::put_time 和 std::ostringstream 避免固定大小的缓冲区问题，并与 C++ I/O 更好地集成
+	std::ostringstream oss;
+
+	// 格式化为 YYYYMMDD_HHMMSS
+	// 注意：在某些旧的或非标准库实现中，std::put_time 可能不可用，
+	// 此时你可以退回到使用 std::strftime 和 char 缓冲区
+	oss << std::put_time(parts, "%Y%m%d_%H%M%S");
+
+	// 6. 添加毫秒数，确保有三位数，不足补零
+	oss << "_" << std::setfill('0') << std::setw(3) << milliseconds;
+
+	return oss.str();
 }
 
 std::string get_tcp_data_string(const BodyHand::PoseResult& pose_result) {
