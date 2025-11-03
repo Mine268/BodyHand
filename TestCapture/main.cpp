@@ -175,6 +175,108 @@ cv::Mat plot_2d_result(const std::vector<cv::Mat>& imgs, const BodyHand::PoseRes
 	return img_vis;
 }
 
+cv::Mat plot_3d_reproj_result(const cv::Mat& img, const BodyHand::PoseResult& pose, const cv::Mat& intr) {
+	cv::Mat img_vis = img.clone();
+
+	if (pose.valid_body) {
+		cv::Mat kps3d_mat(pose.body_kps_3d.size(), 3, CV_32F);
+		for (size_t j = 0; j < pose.body_kps_3d.size(); ++j) {
+			kps3d_mat.at<float>(j, 0) = pose.body_kps_3d[j].x; // X
+			kps3d_mat.at<float>(j, 1) = pose.body_kps_3d[j].y; // Y
+			kps3d_mat.at<float>(j, 2) = pose.body_kps_3d[j].z; // Z
+		}
+
+		cv::Mat rvec = cv::Mat::zeros(3, 1, CV_32F); // 旋转向量 (0, 0, 0)
+		cv::Mat tvec = cv::Mat::zeros(3, 1, CV_32F); // 平移向量 (0, 0, 0)
+		cv::Mat distCoeffs = cv::Mat::zeros(4, 1, CV_32F); // 假设无畸变或使用零矩阵占位
+
+		std::vector<cv::Point2f> projected_points;
+		cv::projectPoints(kps3d_mat, rvec, tvec, intr, distCoeffs, projected_points);
+		for (const auto& pt2d : projected_points) {
+			// 检查点是否在图像范围内，避免绘图错误
+			if (pt2d.x >= 0 && pt2d.x < img_vis.cols &&
+				pt2d.y >= 0 && pt2d.y < img_vis.rows) {
+				// 绘制关键点（例如，一个红色小圆圈）
+				cv::circle(img_vis, pt2d, 3, cv::Scalar(0, 255, 0), -1 );
+			}
+		}
+		for (const auto& conn : BODY_CONNECTION) {
+			if (projected_points[conn.first].x > 0 && projected_points[conn.first].y > 0 &&
+				projected_points[conn.second].x > 0 && projected_points[conn.second].y > 0) {
+				cv::line(img_vis, projected_points[conn.first], projected_points[conn.second], cv::Scalar(255, 0, 0), 2);
+			}
+		}
+	}
+
+	if (pose.valid_left) {
+		const int LEFT_HAND_KPS_COUNT = 21;
+		cv::Mat kps3d_hand_mat(LEFT_HAND_KPS_COUNT, 3, CV_32F);
+		for (size_t j = 0; j < LEFT_HAND_KPS_COUNT; ++j) {
+			if (j < pose.hand_kps_3d.size()) {
+				kps3d_hand_mat.at<float>(j, 0) = pose.hand_kps_3d[j].x; // X
+				kps3d_hand_mat.at<float>(j, 1) = pose.hand_kps_3d[j].y; // Y
+				kps3d_hand_mat.at<float>(j, 2) = pose.hand_kps_3d[j].z; // Z
+			}
+		}
+
+		cv::Mat rvec = cv::Mat::zeros(3, 1, CV_32F);
+		cv::Mat tvec = cv::Mat::zeros(3, 1, CV_32F);
+		cv::Mat distCoeffs = cv::Mat::zeros(4, 1, CV_32F);
+
+		std::vector<cv::Point2f> projected_hand_points;
+		cv::projectPoints(kps3d_hand_mat, rvec, tvec, intr, distCoeffs, projected_hand_points);
+		for (const auto& pt2d : projected_hand_points) {
+			// 检查点是否在图像范围内
+			if (pt2d.x >= 0 && pt2d.x < img_vis.cols &&
+				pt2d.y >= 0 && pt2d.y < img_vis.rows) {
+				// 绘制左手关键点（黄色，与 2D 绘图颜色一致）
+				cv::circle(img_vis, pt2d, 3, cv::Scalar(0, 255, 255), -1);
+			}
+		}
+		for (const auto& conn : HAND_CONNECTION) {
+			if (projected_hand_points[conn.first].x > 0 && projected_hand_points[conn.first].y > 0 &&
+				projected_hand_points[conn.second].x > 0 && projected_hand_points[conn.second].y > 0) {
+				cv::line(img_vis, projected_hand_points[conn.first], projected_hand_points[conn.second], cv::Scalar(255, 255, 0), 2);
+			}
+		}
+	}
+
+	if (pose.valid_right) {
+		const size_t HAND_KPS_COUNT = 21;
+		const size_t RIGHT_HAND_START_IDX = HAND_KPS_COUNT; // 21
+
+		cv::Mat kps3d_hand_mat(HAND_KPS_COUNT, 3, CV_32F);
+		for (size_t j = 0; j < HAND_KPS_COUNT; ++j) {
+			size_t global_idx = RIGHT_HAND_START_IDX + j;
+			if (global_idx < pose.hand_kps_3d.size()) {
+				kps3d_hand_mat.at<float>(j, 0) = pose.hand_kps_3d[global_idx].x;
+				kps3d_hand_mat.at<float>(j, 1) = pose.hand_kps_3d[global_idx].y;
+				kps3d_hand_mat.at<float>(j, 2) = pose.hand_kps_3d[global_idx].z;
+			}
+		}
+
+		cv::Mat rvec = cv::Mat::zeros(3, 1, CV_32F);
+		cv::Mat tvec = cv::Mat::zeros(3, 1, CV_32F);
+		cv::Mat distCoeffs = cv::Mat::zeros(4, 1, CV_32F);
+
+		std::vector<cv::Point2f> projected_hand_points;
+		cv::projectPoints(kps3d_hand_mat, rvec, tvec, intr, distCoeffs, projected_hand_points);
+		for (const auto& pt2d : projected_hand_points) {
+			if (pt2d.x >= 0 && pt2d.x < img_vis.cols && pt2d.y >= 0 && pt2d.y < img_vis.rows) {
+				cv::circle(img_vis, pt2d, 3, cv::Scalar(0, 255, 255), -1); // 手部点 (黄色)
+			}
+		}
+		for (const auto& conn : HAND_CONNECTION) {
+			if (projected_hand_points[conn.first].x > 0 && projected_hand_points[conn.first].y > 0 &&
+				projected_hand_points[conn.second].x > 0 && projected_hand_points[conn.second].y > 0) {
+				cv::line(img_vis, projected_hand_points[conn.first], projected_hand_points[conn.second], cv::Scalar(255, 255, 0), 2);
+			}
+		}
+	}
+
+	return img_vis;
+}
+
 int main(int argc, char** argv) {
 
 	// ******** 参数解析 ********
@@ -362,6 +464,10 @@ int main(int argc, char** argv) {
 
 			// 进行姿态估计
 			pe.estimatePose(imgs, pose_result, 0);
+			if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
+				cv::Mat img_3d_reproj = plot_3d_reproj_result(imgs[0], pose_result, intr[0]);
+				cv::imshow("3D reproj", img_3d_reproj);
+			}
 			// 将相机空间姿态变换到全局坐标系
 			pose_result = apply_trans(pose_result, rot_world, trans_world);
 
@@ -377,8 +483,8 @@ int main(int argc, char** argv) {
 				//cv::imshow("Hand detection", hand_ref_img);
 
 				// 可视化2D结果
-				cv::Mat img_2d = plot_2d_result(imgs, pose_result, 0);
-				cv::imshow("2D Result", img_2d);
+				//cv::Mat img_2d = plot_2d_result(imgs, pose_result, 0);
+				//cv::imshow("2D Result", img_2d);
 
 				if (!no_write_file) {
 					// 存储到文件，每行第一个是时间戳

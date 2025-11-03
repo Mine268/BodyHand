@@ -93,6 +93,43 @@ namespace BodyHand {
 			conf_kpss.emplace_back(std::move(conf_kps));
 			conf_bodies.emplace_back(std::move(conf_body));
 		}
+		// kpss2d，conf_kpss，conf_bodies的每个vector元素按照conf_bodies的值进行从大到小排序
+		for (std::size_t i = 0; i < conf_bodies.size(); ++i) {
+			// 获取当前图像的姿态数量 N
+			std::size_t num_poses = conf_bodies[i].size();
+
+			// 如果该图像没有人，则跳过
+			if (num_poses == 0) {
+				continue;
+			}
+
+			// 1. 创建一个索引向量，用于存储原始顺序
+			std::vector<std::size_t> indices(num_poses);
+			std::iota(indices.begin(), indices.end(), 0); // 填充 0, 1, 2, ..., N-1
+
+			// 2. 使用 std::sort 和自定义比较函数对索引进行排序
+			// 比较函数基于 conf_bodies[i] 的值进行降序 (从大到小)
+			std::sort(indices.begin(), indices.end(), [&](std::size_t a, std::size_t b) {
+				return conf_bodies[i][a] > conf_bodies[i][b];
+				});
+
+			// 3. 根据排序后的索引创建新的向量
+			std::vector<std::vector<cv::Point2f>> sorted_kpss2d_view;
+			std::vector<std::vector<float>> sorted_conf_kpss_view;
+			std::vector<float> sorted_conf_bodies_view;
+
+			for (std::size_t index : indices) {
+				sorted_kpss2d_view.emplace_back(std::move(kpss2d[i][index]));
+				sorted_conf_kpss_view.emplace_back(std::move(conf_kpss[i][index]));
+				sorted_conf_bodies_view.emplace_back(conf_bodies[i][index]); // float可以直接复制
+			}
+
+			// 4. 用新的排序结果替换原始向量
+			kpss2d[i] = std::move(sorted_kpss2d_view);
+			conf_kpss[i] = std::move(sorted_conf_kpss_view);
+			conf_bodies[i] = std::move(sorted_conf_bodies_view);
+		}
+
 		return true;
 	}
 

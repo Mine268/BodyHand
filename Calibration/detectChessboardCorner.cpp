@@ -32,12 +32,12 @@ bool extractOneImageCorners(const cv::Mat& image,
     downsampleImage = grayImage;
     //cv::resize(grayImage, downsampleImage, cv::Size(image.cols / 4, image.rows / 4), 0, 0, cv::INTER_LINEAR);
     // Apply bilateral filter to preserve edges while smoothing low frequency areas
-    cv::Mat filteredImage;
-    cv::bilateralFilter(downsampleImage, filteredImage, 9, 75, 75);
-    downsampleImage = filteredImage;
+    //cv::Mat filteredImage;
+    //cv::bilateralFilter(downsampleImage, filteredImage, 9, 75, 75);
+    //downsampleImage = filteredImage;
 
     bool patternWasFound = cv::findChessboardCorners(downsampleImage, cv::Size(NUM_HEIGHT, NUM_WIDTH), corners,
-        cv::CALIB_CB_FAST_CHECK);
+        cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_NORMALIZE_IMAGE);
     if (patternWasFound)
     {
         // 恢复角点的原始尺寸
