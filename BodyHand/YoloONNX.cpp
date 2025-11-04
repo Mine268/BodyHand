@@ -96,25 +96,26 @@ namespace BodyHand {
 
             if (isCuda && (cuda_available == available_providers.end()))
             {
-                //std::cout << "Your ORT build without GPU. Change to CPU." << std::endl;
-                //std::cout << "************* Infer model on CPU! *************" << std::endl;
+                std::cout << "Pose：无可用cuda，使用cpu进行推理。" << endl;
             }
             else if (isCuda && (cuda_available != available_providers.end()))
             {
-                //std::cout << "************* Infer model on GPU! *************" << std::endl;
+                std::cout << "Pose：尝试使用cuda推理。" << std::endl;
+                OrtCUDAProviderOptions cudaOption;
+                cudaOption.device_id = cudaId;
+                _OrtSessionOptions.AppendExecutionProvider_CUDA(cudaOption);
                 //#if ORT_API_VERSION < ORT_OLD_VISON
-                //			OrtCUDAProviderOptions cudaOption;
-                //			cudaOption.device_id = cudaID;
-                //            _OrtSessionOptions.AppendExecutionProvider_CUDA(cudaOption);
+                //	OrtCUDAProviderOptions cudaOption;
+                //	cudaOption.device_id = cudaID;
+                //    _OrtSessionOptions.AppendExecutionProvider_CUDA(cudaOption);
                 //#else
-                //			OrtStatus* status = OrtSessionOptionsAppendExecutionProvider_CUDA(_OrtSessionOptions, cudaID);
+                //	OrtStatus* status = OrtSessionOptionsAppendExecutionProvider_CUDA(_OrtSessionOptions, cudaId);
                 //#endif
             }
             else
             {
-                //std::cout << "************* Infer model on CPU! *************" << std::endl;
+                //std::cout << "Pose：使用CPU推理" << std::endl;
             }
-            //
 
             _OrtSessionOptions.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_EXTENDED);
 
@@ -209,7 +210,8 @@ namespace BodyHand {
                 delete[]temp;
             }
         }
-        catch (const std::exception&) {
+        catch (const std::exception& e) {
+            std::cerr << e.what() << std::endl;
             return false;
         }
         return true;

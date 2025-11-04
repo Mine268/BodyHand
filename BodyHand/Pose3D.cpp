@@ -54,7 +54,7 @@ namespace BodyHand {
 	}
 
 	bool PoseEstimator::loadBodyModel() {
-		return body_model.ReadModel(body_model_cfg.model_path, false);
+		return body_model.ReadModel(body_model_cfg.model_path, true, 0, true);
 	}
 
 	bool PoseEstimator::loadHandModel() {

@@ -56,6 +56,11 @@ namespace BodyHand {
 		try {
 			std::wstring handlr_model_path_w(handlr_model_path.begin(), handlr_model_path.end());
 			std::wstring hamer_model_path_w(hamer_model_path.begin(), hamer_model_path.end());
+
+            OrtCUDAProviderOptions cudaOption;
+            cudaOption.device_id = 0;
+            ort_opt.AppendExecutionProvider_CUDA(cudaOption);
+
 			handlr_session = new Ort::Session(
 				ort_env,
 				handlr_model_path_w.c_str(),
