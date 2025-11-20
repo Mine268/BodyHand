@@ -5,6 +5,8 @@ $env:Path += ";PROGRAM DIR"
 $global:ROOT = "YOUR CAPTURE PATH"
 ```
 
+注意不要忘了 `$env:Path` 定义中的分号。
+
 ## 0. 配置拍摄参数
 
 可以配置的相机拍摄：
@@ -16,7 +18,7 @@ $global:ROOT = "YOUR CAPTURE PATH"
 使用如下的命令可以可视化图像捕捉结果，通过调整曝光参数使得图像捕捉结果清晰均衡
 
 ```powershell
-.\SynchronizeCapture.exe `
+SynchronizeCapture.exe `
 	--exposure=10000 `
 	--fps=10 `
 	--gain=17 `
@@ -33,7 +35,7 @@ $global:ROOT = "YOUR CAPTURE PATH"
 
 ```powershell
 mkdir $global:ROOT\calib_stereo
-.\SynchronizeCapture.exe `
+SynchronizeCapture.exe `
 	--exposure=10000 `
 	--fps=2 `
 	--gain=17 `
@@ -47,7 +49,7 @@ mkdir $global:ROOT\calib_stereo
 然后运行双视图标定命令：
 
 ```powershell
-.\Calibration.exe $global:ROOT\calib_stereo V 6 9 25
+Calibration.exe $global:ROOT\calib_stereo V 6 9 25
 ```
 
 第一个参数为上一条命令的 `output_dir`，随后的 `V 6 9 25` 直接照抄。如果标定成功程序将在 `E:\BodyHandCapture\2025_10_22\calib_stereo` 目录下生成 `camera_param.txt` 文件，其中包含了标定信息。如果标定失败，请删除 V0 和 V1 文件夹并将标定板的挪近一些重新捕捉。
@@ -60,7 +62,7 @@ mkdir $global:ROOT\calib_stereo
 
 ```powershell
 mkdir $global:ROOT\calib_single
-.\SynchronizeCapture.exe `
+SynchronizeCapture.exe `
 	--exposure=10000 `
 	--fps=2 `
 	--gain=17 `
@@ -70,7 +72,7 @@ mkdir $global:ROOT\calib_single
 然后使用单视图标定命令进行标定，这一程序只需要一张图像就能完成标定。如果可视化的标定板格点紊乱或者输出
 
 ```powershell
-.\SingleCalibration.exe $global:ROOT\calib_single\V0\000000.bmp 6 9 25
+SingleCalibration.exe $global:ROOT\calib_single\V0\000000.bmp 6 9 25
 ```
 
 ```
@@ -107,7 +109,7 @@ ${MODEL_DIR}\hand_mano.onnx
 直接使用如下命令可以开启姿态估计系统
 
 ```powershell
-.\MultiviewPoseEstimation2.exe $global:ROOT\calib.cfg
+MultiviewPoseEstimation2.exe $global:ROOT\calib.cfg
 ```
 
 其中第一个参数为刚才生成的配置文件路径，有两个可选参数：

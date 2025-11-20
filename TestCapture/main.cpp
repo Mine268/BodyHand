@@ -281,6 +281,7 @@ int main(int argc, char** argv) {
 
 	// ******** 参数解析 ********
 	std::string config_path;
+	std::vector<int> tcp_ports;
 	bool send_tcp = false;
 	bool no_write_file = false;
 
@@ -293,12 +294,17 @@ int main(int argc, char** argv) {
 		"\n\t最后一行是可写可不写的，用来表示如何从相机坐标系变换到全局坐标系，包含12个浮点数，描述的是全局坐标系在相机坐标系下的三轴方向和原点偏移"
 	);
 	parser.add_argument("config_path").help("配置文件地址");
-	parser.add_argument("--send_tcp").help("是否通过TCP发送姿态数据").default_value(false).implicit_value(true).nargs(0);
+	//parser.add_argument("--send_tcp").help("是否通过TCP发送姿态数据").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--send_tcp").help("要进行数据发送的一个或多个端口").scan<'i', int>().nargs(argparse::nargs_pattern::at_least_one);
 	parser.add_argument("--no_write_file").help("是否将结果写入文件").default_value(false).implicit_value(true).nargs(0);
 	try {
 		parser.parse_args(argc, argv);
 		config_path = parser.get<std::string>("config_path");
-		send_tcp = parser.get<bool>("--send_tcp");
+		//send_tcp = parser.get<bool>("--send_tcp");
+		if (parser.is_used("--send_tcp")) {
+			send_tcp = true;
+			tcp_ports = parser.get<std::vector<int>>("--send_tcp");
+		}
 		no_write_file = parser.get<bool>("--no_write_file");
 	}
 	catch (const std::runtime_error& err) {
@@ -404,27 +410,71 @@ int main(int argc, char** argv) {
 	std::cout << "姿态估计器构造完成。" << std::endl;
 
 	// ******** TCP服务端 ********
-	SOCKET ls{}, cs{};
-	if (send_tcp) {
+	std::vector<SOCKET> listen_sockets;
+	std::vector<SOCKET> client_sockets;
+	if (!tcp_ports.empty()) {
 		if (!InitWinsock()) {
 			std::cerr << "Winsock 初始化失败，无法启动 TCP 服务器。" << std::endl;
 			return -1;
 		}
-		ls = CreateListeningSocket("5175");
-		if (ls == INVALID_SOCKET) {
-			std::cerr << "创建监听套接字失败，无法启动 TCP 服务器。" << std::endl;
-			WSACleanup();
-			return -1;
+
+		std::cout << "正在初始化 " << tcp_ports.size() << " 个 TCP 端口..." << std::endl;
+
+		for (int port : tcp_ports) {
+			std::string port_str = std::to_string(port);
+
+			// 创建监听 Socket
+			SOCKET ls = CreateListeningSocket(port_str.c_str());
+			if (ls == INVALID_SOCKET) {
+				std::cerr << "[Port " << port << "] 创建监听失败，跳过此端口。" << std::endl;
+				continue;
+			}
+			listen_sockets.push_back(ls);
+
+			std::cout << "[Port " << port << "] 等待客户端连接..." << std::endl;
+
+			// 阻塞等待客户端连接
+			// 注意：这里是串行阻塞。必须等到 Port A 连上，才会去监听 Port B
+			SOCKET cs = AcceptClient(ls);
+			if (cs == INVALID_SOCKET) {
+				std::cerr << "[Port " << port << "] 接受连接失败。" << std::endl;
+				CloseSocket(ls); // 如果连接失败，关闭对应的监听
+				// 即使失败也继续尝试下一个端口，还是直接退出取决于你的需求
+				// 这里选择继续，但该端口将不可用
+			}
+			else {
+				client_sockets.push_back(cs);
+				std::cout << "[Port " << port << "] 客户端已连接！" << std::endl;
+			}
 		}
-		cs = AcceptClient(ls);
-		if (cs == INVALID_SOCKET) {
-			std::cerr << "接受客户端连接失败，无法启动 TCP 服务器。" << std::endl;
-			CloseSocket(ls);
+		if (client_sockets.empty()) {
+			std::cerr << "错误：没有任何客户端成功连接，程序退出。" << std::endl;
 			CleanupWinsock();
 			return -1;
 		}
-		std::cout << "客户端已连接，可以发送数据。" << std::endl;
+		std::cout << "所有端口准备就绪，共 " << client_sockets.size() << " 个客户端。" << std::endl;
 	}
+	//SOCKET ls{}, cs{};
+	//if (send_tcp) {
+	//	if (!InitWinsock()) {
+	//		std::cerr << "Winsock 初始化失败，无法启动 TCP 服务器。" << std::endl;
+	//		return -1;
+	//	}
+	//	ls = CreateListeningSocket("5175");
+	//	if (ls == INVALID_SOCKET) {
+	//		std::cerr << "创建监听套接字失败，无法启动 TCP 服务器。" << std::endl;
+	//		WSACleanup();
+	//		return -1;
+	//	}
+	//	cs = AcceptClient(ls);
+	//	if (cs == INVALID_SOCKET) {
+	//		std::cerr << "接受客户端连接失败，无法启动 TCP 服务器。" << std::endl;
+	//		CloseSocket(ls);
+	//		CleanupWinsock();
+	//		return -1;
+	//	}
+	//	std::cout << "客户端已连接，可以发送数据。" << std::endl;
+	//}
 
 	// ******** 构造捕捉系统 ********
 	get_app();
@@ -502,8 +552,23 @@ int main(int argc, char** argv) {
 
 				// 如果开启了TCP发送，则拼接字符串并发送：x1, y1, z1, x2, y2, z2, ...
 				if (!send_tcp) continue;
-				std::string tcp_data = get_tcp_data_string(pose_result);
-				SendTextLine(cs, tcp_data);
+				//std::string tcp_data = get_tcp_data_string(pose_result);
+				//SendTextLine(cs, tcp_data);
+				if (!client_sockets.empty()) {
+					std::string tcp_data = get_tcp_data_string(pose_result);
+					// 遍历发送
+					for (size_t i = 0; i < client_sockets.size(); ++i) {
+						// 注意：如果某个客户端断开，SendTextLine 会失败
+						// 这里简单的实现是尝试发送，如果失败打印错误但不崩溃
+						bool success = SendTextLine(client_sockets[i], tcp_data);
+						if (!success) {
+							// 实际项目中可能需要在这里移除断开的 socket，
+							// 但为了代码简单，这里仅打印错误。
+							// WSAGetLastError() 可以查看具体错误
+							std::cerr << "向客户端 " << i << " 发送失败" << std::endl;
+						}
+					}
+				}
 			}
 		}
 	} while (true);
@@ -512,9 +577,10 @@ int main(int argc, char** argv) {
 	}
 
 	// ******** 关闭TCP连接 ********
-	if (send_tcp) {
+	if (!tcp_ports.empty()) {
 		std::cout << "关闭 TCP 服务器..." << std::endl;
-		CloseSocket(ls);
+		for (SOCKET s : client_sockets) CloseSocket(s);
+		for (SOCKET s : listen_sockets) CloseSocket(s);
 		CleanupWinsock();
 	}
 
