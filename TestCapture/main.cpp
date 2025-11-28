@@ -175,7 +175,7 @@ cv::Mat plot_2d_result(const std::vector<cv::Mat>& imgs, const BodyHand::PoseRes
 	return img_vis;
 }
 
-cv::Mat plot_3d_reproj_result(const cv::Mat& img, const BodyHand::PoseResult& pose, const cv::Mat& intr) {
+cv::Mat plot_3d_reproj_result(const cv::Mat& img, const BodyHand::PoseResult& pose, const cv::Mat& intr, bool no_hand) {
 	cv::Mat img_vis = img.clone();
 
 	if (pose.valid_body) {
@@ -208,7 +208,7 @@ cv::Mat plot_3d_reproj_result(const cv::Mat& img, const BodyHand::PoseResult& po
 		}
 	}
 
-	if (pose.valid_left) {
+	if (pose.valid_left && !no_hand) {
 		const int LEFT_HAND_KPS_COUNT = 21;
 		cv::Mat kps3d_hand_mat(LEFT_HAND_KPS_COUNT, 3, CV_32F);
 		for (size_t j = 0; j < LEFT_HAND_KPS_COUNT; ++j) {
@@ -241,7 +241,7 @@ cv::Mat plot_3d_reproj_result(const cv::Mat& img, const BodyHand::PoseResult& po
 		}
 	}
 
-	if (pose.valid_right) {
+	if (pose.valid_right && !no_hand) {
 		const size_t HAND_KPS_COUNT = 21;
 		const size_t RIGHT_HAND_START_IDX = HAND_KPS_COUNT; // 21
 
@@ -282,6 +282,9 @@ int main(int argc, char** argv) {
 	// ******** 参数解析 ********
 	std::string config_path;
 	std::vector<int> tcp_ports;
+	bool no_hand = false;
+	bool show_hand_bbox = false;
+	bool show_3d = true;
 	bool send_tcp = false;
 	bool no_write_file = false;
 
@@ -294,13 +297,17 @@ int main(int argc, char** argv) {
 		"\n\t最后一行是可写可不写的，用来表示如何从相机坐标系变换到全局坐标系，包含12个浮点数，描述的是全局坐标系在相机坐标系下的三轴方向和原点偏移"
 	);
 	parser.add_argument("config_path").help("配置文件地址");
-	//parser.add_argument("--send_tcp").help("是否通过TCP发送姿态数据").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--no_hand").help("是否取消进行手部姿态估计").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--show_hand_bbox").help("是否在2D结果中显示手部检测框").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--no_3d").help("是否取消显示3D重投影结果").default_value(false).implicit_value(true).nargs(0);
 	parser.add_argument("--send_tcp").help("要进行数据发送的一个或多个端口").scan<'i', int>().nargs(argparse::nargs_pattern::at_least_one);
 	parser.add_argument("--no_write_file").help("是否将结果写入文件").default_value(false).implicit_value(true).nargs(0);
 	try {
 		parser.parse_args(argc, argv);
 		config_path = parser.get<std::string>("config_path");
-		//send_tcp = parser.get<bool>("--send_tcp");
+		no_hand = parser.get<bool>("--no_hand");
+		show_hand_bbox = parser.get<bool>("--show_hand_bbox");
+		show_3d = !parser.get<bool>("--no_3d");
 		if (parser.is_used("--send_tcp")) {
 			send_tcp = true;
 			tcp_ports = parser.get<std::vector<int>>("--send_tcp");
@@ -454,27 +461,6 @@ int main(int argc, char** argv) {
 		}
 		std::cout << "所有端口准备就绪，共 " << client_sockets.size() << " 个客户端。" << std::endl;
 	}
-	//SOCKET ls{}, cs{};
-	//if (send_tcp) {
-	//	if (!InitWinsock()) {
-	//		std::cerr << "Winsock 初始化失败，无法启动 TCP 服务器。" << std::endl;
-	//		return -1;
-	//	}
-	//	ls = CreateListeningSocket("5175");
-	//	if (ls == INVALID_SOCKET) {
-	//		std::cerr << "创建监听套接字失败，无法启动 TCP 服务器。" << std::endl;
-	//		WSACleanup();
-	//		return -1;
-	//	}
-	//	cs = AcceptClient(ls);
-	//	if (cs == INVALID_SOCKET) {
-	//		std::cerr << "接受客户端连接失败，无法启动 TCP 服务器。" << std::endl;
-	//		CloseSocket(ls);
-	//		CleanupWinsock();
-	//		return -1;
-	//	}
-	//	std::cout << "客户端已连接，可以发送数据。" << std::endl;
-	//}
 
 	// ******** 构造捕捉系统 ********
 	get_app();
@@ -514,8 +500,8 @@ int main(int argc, char** argv) {
 
 			// 进行姿态估计
 			pe.estimatePose(imgs, pose_result, 0);
-			if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
-				cv::Mat img_3d_reproj = plot_3d_reproj_result(imgs[0], pose_result, intr[0]);
+			if (show_3d && pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
+				cv::Mat img_3d_reproj = plot_3d_reproj_result(imgs[0], pose_result, intr[0], no_hand);
 				cv::imshow("3D reproj", img_3d_reproj);
 			}
 			// 将相机空间姿态变换到全局坐标系
@@ -526,11 +512,13 @@ int main(int argc, char** argv) {
 				std::string time_string = get_time_string();
 
 				// 可视化手部检测
-				//cv::Mat hand_ref_img = imgs[0];
-				//for (const auto& rect : pose_result.hand_bbox) {
-				//	cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
-				//}
-				//cv::imshow("Hand detection", hand_ref_img);
+				if (show_hand_bbox) {
+					cv::Mat hand_ref_img = imgs[0];
+					for (const auto& rect : pose_result.hand_bbox) {
+						cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
+					}
+					cv::imshow("Hand detection", hand_ref_img);
+				}
 
 				// 可视化2D结果
 				//cv::Mat img_2d = plot_2d_result(imgs, pose_result, 0);
