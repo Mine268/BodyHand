@@ -60,6 +60,7 @@ if __name__ == "__main__":
 
     # 输出到calib.cfg配置文件
     with open("calib.cfg", "w") as f:
+        f.write("[Human detection model file]\n")
         f.write("[Pose model file]\n")
         f.write("[Hand detection model file]\n")
         f.write("[Hand pose estimation model file]\n")
@@ -68,13 +69,13 @@ if __name__ == "__main__":
         # 开始写入标定数据
         # 26个浮点数，前9个表示内参矩阵，接着的9个表示旋转变换矩阵，然后3个表示位移变换向量，最后的5个表示畸变参数
         # 目前用的是写死的内参，第一个视图默认用的是原点位姿，姿态估计程序自己会根据单视图标定的结果自己算
-        f.write("1045.977 0 693.407 0 1042.865 581.199 0 0 1 ")
+        f.write("1052.721 0 730.726 0 1047.504 548.518 0 0 1 ")
         f.write("1 0 0 0 1 0 0 0 1 0 0 0 ")
-        f.write("-0.0751 -0.1446 0 0 0.2794\n")
+        f.write("0 0 0 0 0\n")
         # 写入第二个相机的标定数据
-        f.write("1045.977 0 693.407 0 1042.865 581.199 0 0 1 ")
+        f.write("1052.721 0 730.726 0 1047.504 548.518 0 0 1 ")
         f.write(" ".join(map(str, r_matrix)) + " " + " ".join(map(str, t_matrix)) + " ")
-        f.write("-0.0751 -0.1446 0 0 0.2794\n")
+        f.write("0 0 0 0 0\n")
         # 写入单视图标定数据
         f.write(mono_calib_data + "\n")
 

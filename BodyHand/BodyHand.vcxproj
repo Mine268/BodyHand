@@ -149,13 +149,17 @@
   <ItemGroup>
     <ClInclude Include="HaMeRONNX.h" />
     <ClInclude Include="Pose3D.h" />
+    <ClInclude Include="VitInference.h" />
     <ClInclude Include="YoloONNX.h" />
+    <ClInclude Include="YoloOnnxDet.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HaMeRONNX.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pose3D.cpp" />
+    <ClCompile Include="VitInference.cpp" />
     <ClCompile Include="YoloONNX.cpp" />
+    <ClCompile Include="YoloOnnxDet.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

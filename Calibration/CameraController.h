@@ -42,13 +42,13 @@ public:
 	{
 		// camera parameter
 		cameraMatrix = cv::Mat::eye(3, 3, CV_64F);
-		cameraMatrix.at<double>(0, 0) = 1045.0;
-		cameraMatrix.at<double>(1, 1) = 1045.0;
-		cameraMatrix.at<double>(0, 2) = 720.0;
-		cameraMatrix.at<double>(1, 2) = 540.0;
+		cameraMatrix.at<double>(0, 0) = 1052.721;
+		cameraMatrix.at<double>(1, 1) = 1047.504;
+		cameraMatrix.at<double>(0, 2) = 730.726;
+		cameraMatrix.at<double>(1, 2) = 548.518;
 		cameraMatrix.at<double>(2, 2) = 1;
 
-		distCoeffs = (cv::Mat_<double>(1, 5) << -0.0751, -0.1446, 0, 0, 0.2794);
+		distCoeffs = (cv::Mat_<double>(1, 5) << 0, 0, 0, 0, 0);
 		R = cv::Mat::eye(3, 3, CV_64F);
 		T = cv::Mat::zeros(3, 1, CV_64F);
 

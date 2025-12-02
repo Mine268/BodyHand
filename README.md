@@ -99,7 +99,8 @@ python gen_config.py `
 打开这个生成的配置文件，将其中前三行填入正确的模型文件地址，例如
 
 ```
-${MODEL_DIR}\yolov8n-pose.onnx
+${MODEL_DIR}\yolov8n.onnx
+${MODEL_DIR}\vitpose-s-coco.onnx
 ${MODEL_DIR}\handLR_480x640.onnx
 ${MODEL_DIR}\hand_mano.onnx
 ```
