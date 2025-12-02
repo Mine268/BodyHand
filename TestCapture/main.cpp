@@ -285,6 +285,7 @@ int main(int argc, char** argv) {
 	bool no_hand = false;
 	bool show_hand_bbox = false;
 	bool show_3d = true;
+	bool show_2d = false;
 	bool send_tcp = false;
 	bool no_write_file = false;
 
@@ -300,6 +301,7 @@ int main(int argc, char** argv) {
 	parser.add_argument("--no_hand").help("是否取消进行手部姿态估计").default_value(false).implicit_value(true).nargs(0);
 	parser.add_argument("--show_hand_bbox").help("是否在2D结果中显示手部检测框").default_value(false).implicit_value(true).nargs(0);
 	parser.add_argument("--no_3d").help("是否取消显示3D重投影结果").default_value(false).implicit_value(true).nargs(0);
+	parser.add_argument("--show_2d").help("是否显示2D结果").default_value(false).implicit_value(true).nargs(0);
 	parser.add_argument("--send_tcp").help("要进行数据发送的一个或多个端口").scan<'i', int>().nargs(argparse::nargs_pattern::at_least_one);
 	parser.add_argument("--no_write_file").help("是否将结果写入文件").default_value(false).implicit_value(true).nargs(0);
 	try {
@@ -308,6 +310,7 @@ int main(int argc, char** argv) {
 		no_hand = parser.get<bool>("--no_hand");
 		show_hand_bbox = parser.get<bool>("--show_hand_bbox");
 		show_3d = !parser.get<bool>("--no_3d");
+		show_2d = parser.get<bool>("--show_2d");
 		if (parser.is_used("--send_tcp")) {
 			send_tcp = true;
 			tcp_ports = parser.get<std::vector<int>>("--send_tcp");
@@ -494,20 +497,54 @@ int main(int argc, char** argv) {
 				//cv::imshow(std::format("{}", i), img_bgr);
 				imgs.emplace_back(std::move(img_bgr));
 			}
-			if (cv::waitKey(20) == 'q') {
+			if (cv::waitKey(1) == 'q') {
 				break;
 			}
 
+
 			// 进行姿态估计
 			pe.estimatePose(imgs, pose_result, 0);
-			if (show_3d && pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
+			if (pose_result.valid_body) {
+				std::cout << "Found pose.";
+				if (pose_result.valid_left) {
+					std::cout << " Found left hand.";
+				}
+				if (pose_result.valid_right) {
+					std::cout << " Found right hand.";
+				}
+			}
+			else {
+				std::cout << "No pose found";
+			}
+			std::cout << '\n';
+
+			// 可视化3D重投影结果
+			if (show_3d) {
 				cv::Mat img_3d_reproj = plot_3d_reproj_result(imgs[0], pose_result, intr[0], no_hand);
 				cv::imshow("3D reproj", img_3d_reproj);
 			}
 			// 将相机空间姿态变换到全局坐标系
 			pose_result = apply_trans(pose_result, rot_world, trans_world);
 
-			if (pose_result.valid_body && pose_result.valid_left && pose_result.valid_right) {
+			// 可视化手部检测
+			if (show_hand_bbox) {
+				cv::Mat hand_ref_img = imgs[0];
+				for (const auto& rect : pose_result.hand_bbox) {
+					cv::rectangle(hand_ref_img, rect, cv::Scalar(0, 255, 0), 2);
+				}
+				cv::imshow("Hand detection", hand_ref_img);
+			}
+
+			// 可视化2D结果
+			if (show_2d) {
+				for (int i = 0; i < num_view; ++i) {
+					cv::Mat img_2d = plot_2d_result(imgs, pose_result, i);
+					std::string win_name = "2D View " + std::to_string(i);
+					cv::imshow(win_name, img_2d);
+				}
+			}
+
+			if (pose_result.valid_body) {
 				std::cout << "Found pose\n";
 				std::string time_string = get_time_string();
 
